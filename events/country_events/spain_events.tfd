@@ -1,0 +1,130 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  events/country_events/spain_events.tfd
+#  Eventos históricos para España — Relicta History Engine
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── La Crisis del Siglo XVII ──────────────────────────────────────────────
+event SPAIN_CRISIS_1640 {
+    title   = "SPAIN_CRISIS_1640_TITLE"
+    desc    = "SPAIN_CRISIS_1640_DESC"
+    picture = "GFX_event_spain_court"
+    is_unique = true
+
+    trigger {
+        AND {
+            owner = SPA
+            date >= 12.3.1640
+            stability <= 0.4
+            NOT { has_flag = CRISIS_MANAGED }
+        }
+    }
+
+    option {
+        name = "SPAIN_CRISIS_OPT_A"
+        # Subir impuestos — estabilidad baja pero recursos
+        effect {
+            add_stability   = -0.1
+            set_flag        = CRISIS_MANAGED
+            set_global_flag = SPAIN_HIGH_TAXATION
+        }
+    }
+
+    option {
+        name = "SPAIN_CRISIS_OPT_B"
+        # Concesiones a la nobleza — estabilidad sube
+        trigger {
+            stability >= 0.3
+        }
+        effect {
+            add_stability   = 0.15
+            add_war_support = -0.1
+            set_flag        = CRISIS_MANAGED
+        }
+    }
+
+    option {
+        name = "SPAIN_CRISIS_OPT_C"
+        # Reforma administrativa — lenta pero efectiva
+        effect {
+            add_stability   = 0.05
+            add_war_support = 0.05
+            set_flag        = CRISIS_MANAGED
+            set_flag        = ADMINISTRATIVE_REFORM
+        }
+    }
+}
+
+# ── Riqueza de las Indias ─────────────────────────────────────────────────
+event SPAIN_SILVER_FLEET {
+    title   = "SPAIN_SILVER_FLEET_TITLE"
+    desc    = "SPAIN_SILVER_FLEET_DESC"
+    picture = "GFX_event_silver_fleet"
+    is_unique = false
+    mean_time = 5.0    # Años de media entre disparos
+
+    trigger {
+        AND {
+            owner = SPA
+            NOT { at_war = yes }
+            stability >= 0.5
+        }
+    }
+
+    option {
+        name = "SPAIN_SILVER_OPT_A"
+        # Invertir en la armada
+        effect {
+            add_war_support = 0.1
+            set_flag        = FLEET_INVESTMENT
+        }
+    }
+
+    option {
+        name = "SPAIN_SILVER_OPT_B"
+        # Pagar deudas
+        effect {
+            add_stability = 0.05
+        }
+    }
+}
+
+# ── Rebelión Catalana ─────────────────────────────────────────────────────
+event SPAIN_CATALAN_REVOLT {
+    title   = "SPAIN_CATALAN_REVOLT_TITLE"
+    desc    = "SPAIN_CATALAN_REVOLT_DESC"
+    picture = "GFX_event_revolt"
+    is_unique = true
+
+    trigger {
+        AND {
+            owner = SPA
+            date >= 7.6.1640
+            OR {
+                stability <= 0.3
+                war_support <= 0.2
+            }
+            NOT { has_flag = CATALONIA_PACIFIED }
+        }
+    }
+
+    option {
+        name = "SPAIN_CATALAN_OPT_A"
+        # Represión militar
+        effect {
+            add_stability   = -0.15
+            add_war_support = 0.1
+            set_flag        = CATALONIA_PACIFIED
+        }
+    }
+
+    option {
+        name = "SPAIN_CATALAN_OPT_B"
+        # Negociación y fueros
+        effect {
+            add_stability   = 0.1
+            add_war_support = -0.05
+            set_flag        = CATALONIA_PACIFIED
+            set_flag        = CATALAN_AUTONOMY
+        }
+    }
+}

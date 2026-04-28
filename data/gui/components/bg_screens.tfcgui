@@ -1,0 +1,23 @@
+# data/gui/components/frontend_background.tfcgui
+component frontend_background {
+    type   = panel
+    sprite = "GFX_frontend_bg"
+    size   = [1920, 1080]
+    anchor = TL
+    alpha  = 1.0
+}
+# data/gui/components/mainmenu_background.tfcgui
+component sp_background {
+    type   = panel
+    sprite = "GFX_newgame_bg"
+    size   = [1920, 1080]
+    anchor = TL
+    alpha  = 1.0
+}
+component scenario_background {
+    type   = panel
+    sprite = "GFX_scenario_bg"
+    size   = [1920, 1080]
+    anchor = TL
+    alpha  = 1.0
+}

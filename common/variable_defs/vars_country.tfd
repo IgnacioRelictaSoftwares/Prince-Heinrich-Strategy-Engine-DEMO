@@ -1,0 +1,10 @@
+variable_def independence_var {
+	independence_day = 1811 #int
+}
+
+variable_def province_vars {
+    manpower    = 0.0       # double
+    development = 0         # int
+    devastation = 0.0       # double
+    population  = 0         # int
+}

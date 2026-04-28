@@ -1,0 +1,22 @@
+guilayout FRONTEND_SCENARIO_SELECTOR {
+	visible = true
+	scenario_background {
+        clipping    = false
+    }
+	
+	mainmenu_panel_lowerleft {
+		main_lobby_button = {
+			pos = [0, 100]
+			name = exit_button
+			action      = sp_back
+            interactive = true
+			text = "BACK_MAINMENU"
+		}
+	}
+	mainmenu_panel_lowerright {
+		main_lobby_button = {
+			pos = [0, 100]
+			action = start_game
+		}
+	}
+}

@@ -1,0 +1,42 @@
+province Bahia_Posesion {
+	name = "bay_possesion"
+	desc = "bay_possesion_desc"
+	id = 3
+	color = { 19 0 200 }
+	is_sea     = true
+}
+province Bahia_Lomas {
+	name = "lomas_bay"
+	desc = "lomas_bay_desc"
+	id = 4
+	color = { 20 0 200 }
+	is_sea     = true
+}
+province East_Mouth_Magallean_Strait {
+	name = "east_magallean_mouth"
+	desc = "east_magallean_mouth_desc"
+	id = 5
+	color = { 21 0 200 }
+	is_sea     = true
+}
+province First_East_Stretch_Magallean_Strait {
+	name = "first_stretch_east_m_strait"
+	desc = "first_stretch_east_m_strait_desc"
+	id = 6
+	color = { 22 0 200 }
+	is_sea     = true
+}
+province Primera_Angostura {
+	name = "primera_angostura"
+	desc = "primera_angostura_desc"
+	id = 7
+	color = { 23 0 200 }
+	is_sea     = true
+}
+province Caleta_Municiones {
+	name = "caleta_municiones"
+	desc = "caleta_municiones_desc"
+	id = 8
+	color = { 24 0 200 }
+	is_sea     = true
+}

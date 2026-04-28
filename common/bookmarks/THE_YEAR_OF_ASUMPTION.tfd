@@ -1,0 +1,10 @@
+﻿bookmark THE_AGE_OF_ASSUMPTION {
+	scenary_name = "THE_AGE_OF_ASSUMPTION_NAME"
+	start_date = 18.9.1886
+	
+	main_countries = [ CHL ]
+	secoundary_countries = [ PER BOL ]
+	minor_countries = [ GRP JAP ]
+	
+	scenary_desc = "THE_AGE_OF_ASSUMPTION_DESC"
+}

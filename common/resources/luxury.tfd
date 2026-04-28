@@ -1,0 +1,147 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  common/resources/luxury.tfd
+#  Recursos de lujo y comunes — Relicta History Engine
+#  Valores base en R8 (Reales de a Ocho)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Metales preciosos ─────────────────────────────────────────────────────
+
+resource SILVER_ORE {
+    name         = "RESOURCE_SILVER_ORE_NAME"
+    desc         = "RESOURCE_SILVER_ORE_DESC"
+    type         = LUXURY
+    sub_type     = PRECIOUS_METAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.000001
+    base_value   = 64.0             # Base de los propios R8
+}
+
+resource GOLD_ORE {
+    name         = "RESOURCE_GOLD_ORE_NAME"
+    desc         = "RESOURCE_GOLD_ORE_DESC"
+    type         = LUXURY
+    sub_type     = PRECIOUS_METAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.000001
+    base_value   = 960.0            # ~15x la plata, ratio histórico bimetálico
+}
+
+# ── Especias ──────────────────────────────────────────────────────────────
+
+resource BLACK_PEPPER {
+    name         = "RESOURCE_BLACK_PEPPER_NAME"
+    desc         = "RESOURCE_BLACK_PEPPER_DESC"
+    type         = LUXURY
+    sub_type     = SPICE
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.35
+    base_value   = 28.0
+}
+
+resource CINNAMON {
+    name         = "RESOURCE_CINNAMON_NAME"
+    desc         = "RESOURCE_CINNAMON_DESC"
+    type         = LUXURY
+    sub_type     = SPICE
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.25
+    base_value   = 48.0
+}
+
+resource CLOVES {
+    name         = "RESOURCE_CLOVES_NAME"
+    desc         = "RESOURCE_CLOVES_DESC"
+    type         = LUXURY
+    sub_type     = SPICE
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.20
+    base_value   = 72.0
+}
+
+# ── Gemas ─────────────────────────────────────────────────────────────────
+
+resource DIAMONDS {
+    name         = "RESOURCE_DIAMONDS_NAME"
+    desc         = "RESOURCE_DIAMONDS_DESC"
+    type         = LUXURY
+    sub_type     = GEMSTONE
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.0
+    base_value   = 2400.0
+}
+
+resource EMERALDS {
+    name         = "RESOURCE_EMERALDS_NAME"
+    desc         = "RESOURCE_EMERALDS_DESC"
+    type         = LUXURY
+    sub_type     = GEMSTONE
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.0
+    base_value   = 1800.0
+}
+
+# ── Textiles ──────────────────────────────────────────────────────────────
+
+resource SILK_RAW {
+    name         = "RESOURCE_SILK_RAW_NAME"
+    desc         = "RESOURCE_SILK_RAW_DESC"
+    type         = LUXURY
+    sub_type     = TEXTILE
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.60
+    base_value   = 32.0
+}
+
+resource COTTON_RAW {
+    name         = "RESOURCE_COTTON_RAW_NAME"
+    desc         = "RESOURCE_COTTON_RAW_DESC"
+    type         = COMMON
+    sub_type     = TEXTILE
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.80
+    base_value   = 4.0
+}
+
+# ── Alimentos comunes ─────────────────────────────────────────────────────
+
+resource GRAIN {
+    name         = "RESOURCE_GRAIN_NAME"
+    desc         = "RESOURCE_GRAIN_DESC"
+    type         = COMMON
+    sub_type     = FOOD
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 1.0              # Cultivo anual completo
+    base_value   = 0.8
+}
+
+resource CATTLE {
+    name         = "RESOURCE_CATTLE_NAME"
+    desc         = "RESOURCE_CATTLE_DESC"
+    type         = COMMON
+    sub_type     = LIVESTOCK
+    isRenovable  = true
+    renewal_tick = YEARLY
+    renewal_rate = 0.25
+    base_value   = 3.5
+}
+
+resource FISH {
+    name         = "RESOURCE_FISH_NAME"
+    desc         = "RESOURCE_FISH_DESC"
+    type         = COMMON
+    sub_type     = FOOD
+    isRenovable  = true
+    renewal_tick = MONTHLY
+    renewal_rate = 0.15
+    base_value   = 1.5
+}

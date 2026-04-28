@@ -1,0 +1,20 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  data/gui/components/main_lobby_button.tfcgui
+#  Componente: botón estándar del menú principal.
+# ═══════════════════════════════════════════════════════════════════════════
+
+component main_lobby_button {
+    type        = button
+	name        = ""
+    sprite      = "GFX_main_menu_btn"
+	anchor      = CC
+    origo       = CC
+    size        = [288, 32]
+	pos         = [0, 0]
+    text        = ""
+	font       = "hoi_26mbs"
+    text_align  = center
+    interactive = true
+    alpha       = 1.0
+	number_of_frames = 3
+}

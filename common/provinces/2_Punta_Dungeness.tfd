@@ -1,0 +1,28 @@
+province Punta_Dungeness {
+	name = "Punta Dungeness"
+	desc = "PROVINCE_PARINACOTA_DESC"
+	id = 2
+	color = { 255 0 255 }
+	is_coastal = true
+}
+province Cabo_Virgenes {
+	name = "cape_virgins"
+	desc = "cape_virgins_desc"
+	id = 9
+	color = { 253 0 255 }
+	is_coastal = true
+}
+province Punta_Baja {
+	name = "punta_baja"
+	desc = "punta_baja_desc"
+	id = 10
+	color = { 253 1 255 }
+	is_coastal = true
+}
+province Punta_Delgada {
+	name = "punta_delgada"
+	desc = "punta_delgada_desc"
+	id = 11
+	color = { 253 2 255 }
+	is_coastal = true
+}

@@ -1,0 +1,46 @@
+mainmenu_single_player{
+		
+        type        = panel
+		anchor      = CC
+        origo       = CC
+        visible     = false
+        clipping    = false
+
+        main_lobby_button {
+			name 		= sp_new_button 
+            type        = button
+            pos         = [ 0, -140 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_NEW"
+            action      = sp_new
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_continue_button
+            pos         = [ 0, -90 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_CONTINUE"
+            action      = sp_continue
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_load_button
+            type        = button
+            pos         = [ 0, -40 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_LOAD"
+            action      = sp_load
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_back_button
+            pos         = [ 0, 10 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_BACK"
+            action      = sp_back
+            interactive = true
+        }
+    }

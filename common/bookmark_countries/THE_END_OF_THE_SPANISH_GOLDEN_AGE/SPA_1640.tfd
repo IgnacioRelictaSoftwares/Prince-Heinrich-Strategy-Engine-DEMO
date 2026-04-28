@@ -1,0 +1,14 @@
+bookmark_country SPA{
+	name = "SPA_1640_NAME"
+	counntry_desc = "SPA_1640_DESC"
+	leader = "Felipe_IV_SPAIN"
+	leader_nick = "THE_PLANET_KING_NICK"
+	
+	armies = []
+	wars = []
+	notable_figures = []
+	flag_ship = []
+	army_count = [heavy_ships = 52, medium_ships = 75, galleys = 28]
+	vassals = [ CHL, GRP, VOP, VNE]
+	
+}

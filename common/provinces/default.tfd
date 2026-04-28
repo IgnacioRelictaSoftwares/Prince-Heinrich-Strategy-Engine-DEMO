@@ -1,0 +1,13 @@
+province Gea {
+	name = "Gea"
+	desc = "Gea_Des"
+	id = 0
+	color = { 181 125 108 }
+}
+province Okeanos_Mundi {
+	name = "Okeanos_Mundial"
+	desc = "Okeanos_Mundial_desc"
+	id = 1
+	color = { 0 0 255 }
+	is_sea  = true
+}

@@ -1,0 +1,23 @@
+country CHL {
+	name = "CHL_NAME"
+	flag = CHL
+	color = { 251 71 95 }
+	capital = ARICA_STATE
+	prestige = 900.0
+	treasury = 2500000.0
+	manpower = 35000
+	stability = 0.72
+	war_support = 0.35
+	independence_day = 4.9.1811
+	history {
+		4.9.1811 = {
+			
+		}
+		18.9.1886 = {
+			head_of_state = JOSE_MANUEL_BALMACEDA
+			government = PRESIDENTIALISM_PORTALINO
+			religion   = CATHOLISISM
+			ideology   = OLIGARCHY
+		}
+	}
+}

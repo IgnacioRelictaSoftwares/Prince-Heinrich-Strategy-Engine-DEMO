@@ -1,0 +1,166 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  data/gui/layouts/frontend_mainmenu.tfgui
+#  Menú principal — Relicta History Engine
+# ═══════════════════════════════════════════════════════════════════════════
+
+guilayout FRONTEND_MAINMENU {
+
+    # ── Fondo completo ────────────────────────────────────────────────────
+    sp_background {
+        clipping    = false
+    }
+
+    # ── Logo — esquina superior izquierda ─────────────────────────────────
+    # Sin clipping para que el sprite se vea completo
+    mainmenu_panel_upperleft {
+        type        = panel
+        anchor      = TL
+        origo       = TL
+        pos         = [ 10, 0 ]
+        size        = [ 400, 550 ]
+        visible     = true
+        clipping    = false
+
+        frontend_game_logo {
+            anchor      = TL
+            origo       = TL
+            pos         = [ 0, 0 ]
+            size = [342, 512]
+            clipping    = false
+        }
+
+        version_label {
+            type        = label
+            anchor      = CC
+            origo       = CC
+            pos         = [ 40, 170 ]
+            size        = [ 400, 24 ]
+            text        = "Prince Heinrich Strategy Engine v0.1-dev"
+            font        = "default_medium"
+            visible     = true
+        }
+    }
+
+    # ── Panel superior derecho ────────────────────────────────────────────
+    mainmenu_panel_upperright {
+        type        = panel
+        anchor      = TR
+        origo       = TR
+        pos         = [ 0, 10 ]
+        size        = [ 160, 50 ]
+        visible     = true
+        clipping    = false
+
+        main_lobby_button {
+			name 		= settings_button
+            size        = [ 130, 40 ]
+            text        = "FRONTEND_SETTINGS"
+            action      = "settings"
+            interactive = true
+        }
+    }
+
+    # ── Panel principal de botones — centro, verticalmente centrado ────
+    mainmenu_panel_bottom {
+        type        = panel
+        anchor      = CC
+        origo       = CC
+        
+        visible     = true
+        clipping    = false
+
+        main_lobby_button {
+			name 		= single_player_button
+            pos         = [ 0, -170 ]
+            size        = [ 250, 38 ]
+            text        = "FRONTEND_SINGLEPLAYER"
+            action      = "sp_open"
+            interactive = true
+        }
+
+		main_lobby_button {
+			name 		= multi_player_button
+            pos         = [ 0, -130 ]
+            size        = [ 250, 38 ]
+            text        = "FRONTEND_MULTIPLAYER"
+            action      = "mp_open"
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= career_profile_button
+            pos         = [ 0, -90 ]
+            size        = [ 250, 38 ]
+            text        = "FRONTEND_CAREER"
+            action      = career
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= credits_button
+            pos         = [ 0, -50 ]
+            size        = [ 250, 38 ]
+            text        = "FRONTEND_CREDITS"
+            action      = credits
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= exit_button
+            pos         = [ 0, -10 ]
+            size        = [ 250, 38 ]
+            text        = "FRONTEND_EXIT"
+            action      = exit
+            interactive = true
+        }
+    }
+
+    # ── Panel single player — mismo lugar, empieza oculto ─────────────────
+   mainmenu_single_player{
+		
+        type        = panel
+		anchor      = CC
+        origo       = CC
+        visible     = true
+        clipping    = false
+
+        main_lobby_button {
+			name 		= sp_new_button 
+            type        = button
+            pos         = [ 0, -140 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_NEW"
+            action      = "sp_new"
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_continue_button
+            pos         = [ 0, -90 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_CONTINUE"
+            action      = "sp_continue"
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_load_button
+            type        = button
+            pos         = [ 0, -40 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_SP_LOAD"
+            action      = "sp_load"
+            interactive = true
+        }
+
+        main_lobby_button {
+			name 		= sp_back_button
+            pos         = [ 0, 10 ]
+            size        = [ 240, 48 ]
+            text        = "FRONTEND_BACK"
+            action      = "sp_back"
+            interactive = true
+        }
+    }
+
+}

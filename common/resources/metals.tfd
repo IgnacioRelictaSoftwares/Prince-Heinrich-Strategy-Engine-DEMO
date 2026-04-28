@@ -1,0 +1,70 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  common/resources/metals.tfd
+#  Recursos metálicos estratégicos — Relicta History Engine
+#  Valores base en R8 (Reales de a Ocho / Peso Plata Fuerte Español)
+#  Cantidades de provincia en Millones de Toneladas Métricas (MTm)
+# ═══════════════════════════════════════════════════════════════════════════
+
+resource IRON_ORE {
+    name         = "RESOURCE_IRON_ORE_NAME"
+    desc         = "RESOURCE_IRON_ORE_DESC"
+    type         = STRATEGIC
+    sub_type     = METAL
+    isRenovable  = false
+    base_value   = 2.5
+}
+
+resource COPPER_ORE {
+    name         = "RESOURCE_COPPER_ORE_NAME"
+    desc         = "RESOURCE_COPPER_ORE_DESC"
+    type         = STRATEGIC
+    sub_type     = METAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.00005
+    base_value   = 8.0
+}
+
+resource TIN_ORE {
+    name         = "RESOURCE_TIN_ORE_NAME"
+    desc         = "RESOURCE_TIN_ORE_DESC"
+    type         = STRATEGIC
+    sub_type     = METAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.00003
+    base_value   = 12.0
+}
+
+resource LEAD_ORE {
+    name         = "RESOURCE_LEAD_ORE_NAME"
+    desc         = "RESOURCE_LEAD_ORE_DESC"
+    type         = STRATEGIC
+    sub_type     = METAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.00004
+    base_value   = 5.0
+}
+
+resource SALTPETER {
+    name         = "RESOURCE_SALTPETER_NAME"
+    desc         = "RESOURCE_SALTPETER_DESC"
+    type         = STRATEGIC
+    sub_type     = MINERAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.00001
+    base_value   = 18.0
+}
+
+resource COAL {
+    name         = "RESOURCE_COAL_NAME"
+    desc         = "RESOURCE_COAL_DESC"
+    type         = STRATEGIC
+    sub_type     = MINERAL
+    isRenovable  = false
+    renewal_tick = CENTURY
+    renewal_rate = 0.000001
+    base_value   = 3.5
+}

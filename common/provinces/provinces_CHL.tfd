@@ -1,0 +1,166 @@
+﻿#Region de Arica y Parinacota
+province General_Lagos {
+      
+	name = "PROVINCE_Gral_Lagos_NAME"
+	desc = "PROVINCE_Gral_Lagos_DESC"
+    id   = 12
+	color = { 254 60 80 }
+
+    terrain = mountain
+    is_coastal = true
+    is_sea     = false
+
+    resources = [
+        COPPER_ORE   { reserves = 2000000.0 }
+        SILVER_ORE   { reserves = 622.0  }
+	    GOLD_ORE     { reserves = 93.0 }
+	    SULFUR_ORE   { reserves = 7500000.0 }
+    ]
+	
+	state = { 1 }
+
+    # Variables de juego — definidas en variable_def province_vars
+    manpower    = 2000.0
+    development = 3
+    population  = 43000
+	
+	history {
+		20.10.1883 = {
+			controller = CHL
+			owner = PER
+			add_core_of = CHL
+		}
+	}
+
+    
+}
+
+province Arica {
+	name = "PROVINCE_ARICA_NAME"
+    desc = "PROVINCE_ARICA_DESC"
+	id = 13
+	color = { 255 60 80 }
+	
+	terrain = coastal_hills
+	is_coastal = true
+	is_sea = false
+	
+	resources = [
+		COPPER_ORE   { reserves = 37000000.0 }
+		SILVER_ORE   { reserves = 28.5 }
+		GOLD_ORE     { reserves = 14.25 }
+	]
+	
+	manpower = 5000.0
+	development = 3
+	population = 75000
+	
+	history {
+		20.10.1883 = {
+			controller = CHL
+			owner = PER
+			add_core_of = CHL
+		}
+	}
+	
+	
+}
+province PUTRE {
+	name = "PROVINCE_PUTRE"
+	desc = "PROVINCE_PUTRE_DESC"
+	id = 15
+	
+	color = { 253 60 80 }
+	
+	terrain = mountain
+	is_sea = false
+	resources = []
+	manpower = 5600
+	development = 2
+	population = 16000
+	
+	history {
+		20.10.1883 = {
+			controller = CHL
+			owner = PER
+			add_core_of = CHL
+		}
+	}
+}
+province CAMARONES {
+	name = "PROVINCE_CAMARONES"
+	desc = "PROVINCE_CAMARONES_DESC"
+	id = 14
+	terrain = coastal_hills
+	is_coastal = true
+	resources = []
+	
+	color = { 252 60 80 }
+	
+	history {
+		20.10.1883 = {
+			controller = CHL
+			owner = PER
+			add_core_of = CHL
+		}
+	}
+}
+#Region de Tarapaca
+province HUARA {
+	name = "PROVINCE_HUARA"
+	desc = "PROVINCE_HUARA_DESC"
+	id = 16
+	is_coastal = true
+	terrain =coastal_hills
+	resources = []
+	
+	color = { 213 249 246 }
+}
+#Region de Antofagasta
+province Pisagua {
+	name = "PROVINCE_PISAGUA_NAME"
+    desc = "PROVINCE_PISAGUA_DESC"
+	id = 13303
+	
+	terrain = coastal_hills
+	is_coastal = true
+	is_sea = false
+	
+	history {
+		1.1.1400 = {
+			owner = INC
+			controller = INC
+		}
+		1.2.1532 = {
+			owner = SPA
+			controller =SPA
+			add_core_of = INC
+			add_core_of = SPA
+		}
+		
+	}
+}
+province Iquique {
+	name = "PROVINCE_IQUIQUE_NAME"
+	desc = "PROVINCE_IQUIQUE_DESC"
+	id = 8217
+	
+	terrain = coastal_hills
+	is_coastal = true
+	is_sea = false
+	
+	history {
+		1.1.1400 = {
+			owner = INC
+			controller = INC
+		}
+		1.2.1532 = {
+			owner = SPA
+			controller =SPA
+			add_core_of = INC
+			add_core_of = SPA
+		}
+		
+	}
+	
+}

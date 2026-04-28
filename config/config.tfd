@@ -1,0 +1,18 @@
+config ACTIVE {
+	config_active = "ULTRA"
+}
+
+config LOW {
+	resolution = 0.5
+}
+config MEDIUM {
+	resolution = 0.75
+}
+
+config HIGH {
+	resolution = 0.85
+}
+
+config ULTRA {
+	resolution = 1.0
+}

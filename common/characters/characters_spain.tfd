@@ -1,0 +1,38 @@
+character Carlos_I_SPAIN {
+	name = "CARLOS_I_ESP_NAME"
+	desc = "CARLOS_I_ESP_DESC"
+	birthdate = 24.2.1500
+	spouse = Isabel_of_Portugal
+	children = [Felipe_II_SPAIN { birthdate = 21.5.1527 },
+	Maria_de_Austria_SPAIN { birthdate = 21.7.1528 },
+	Fernando_SPAIN { birthdate = 22.11.1529 },
+	Stillbirth_I_SPAIN { birthdate = 29.7.1534 },
+	Juana_SPAIN { birthdate = 24.7.1535 },
+	Juan_SPAIN { birthdate = 19.10.1537 },
+	Stillbirth_II_SPAIN { birthdate = 21.4.1539}
+	]
+	death = 21.9.1558
+	leader = [SPA, SIRG, GER, ITA, NAP]
+	title = [SPA_SCI_CER_KING, SIRG_EMPEROR, GER_KING, ITA_KING, DUX_BORG, NAP_KING ]
+	principal_title = {SPA_SCI_CER_KING}
+	trait = trait_name_1
+	trait = trait_name_2
+	traits = { trait_name_1 trait_name_2}
+	traits = [ trait_name_1, trait_name_2 ]
+	marcial = 10
+	diplomacy = 4
+	intrigue = 3
+	intelligence = 5
+	stewardship = 4
+	statesman  = 2
+	seaman = 3
+	prowess = 4
+	1.1.1512 = {
+		init_studies = oxford_university
+	}
+	1.1.1518 = {
+		graduated_from = oxford_university
+		gaduates_like = medic
+	}
+	
+}
