@@ -1,0 +1,8 @@
+spriteTypes = {
+	textSpriteType = {
+		name = "GFX_main_menu_btn"
+		textureFile = "gfx/interface/btn/main_menu_btn.dds"
+		noOfFrames = 3
+		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
+	}
+}
