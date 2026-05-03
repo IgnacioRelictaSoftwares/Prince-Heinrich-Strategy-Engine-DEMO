@@ -1,4 +1,4 @@
-variable_def independence_var {
+variable_def independence_var  {
 	independence_day = 1811 #int
 }
 
