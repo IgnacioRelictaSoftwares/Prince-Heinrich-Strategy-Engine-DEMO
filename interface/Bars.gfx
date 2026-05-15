@@ -1,0 +1,11 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_header_bar"
+		texturefile = "gfx/interface/tiles/tiled_frontend_lower_bar.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_panel_desc"
+		texturefile = "gfx/interface/tiles/tiled_paper_bg"
+	}
+}

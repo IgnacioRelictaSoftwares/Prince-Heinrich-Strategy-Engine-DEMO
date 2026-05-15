@@ -1,0 +1,322 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  technologies/tech_military_naval.tfd — Relicta History Engine
+#  Tecnologías militares y navales post-Guerra del Pacífico (1886)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ─── Army ───────────────────────────────────────────────────────────────────
+
+tech BREECH_LOADING_RIFLES {
+	name = "TECH_BREECH_LOADING_NAME"
+	desc = "TECH_BREECH_LOADING_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 400.0
+	start_tech = yes
+
+	effect {
+		infantry_attack = 0.15
+		infantry_fire_rate = 0.10
+	}
+
+	unlocks {
+		REPEATING_RIFLES
+	}
+}
+
+tech REPEATING_RIFLES {
+	name = "TECH_REPEATING_RIFLES_NAME"
+	desc = "TECH_REPEATING_RIFLES_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 700.0
+	prerequisites = [ BREECH_LOADING_RIFLES ]
+
+	effect {
+		infantry_attack = 0.25
+		infantry_fire_rate = 0.20
+		infantry_ammo_consumption = 0.15
+	}
+
+	unlocks {
+		BOLT_ACTION_RIFLES
+	}
+}
+
+tech BOLT_ACTION_RIFLES {
+	name = "TECH_BOLT_ACTION_RIFLES_NAME"
+	desc = "TECH_BOLT_ACTION_RIFLES_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_3
+	base_cost = 1000.0
+	prerequisites = [ REPEATING_RIFLES ]
+
+	effect {
+		infantry_attack = 0.30
+		infantry_fire_rate = 0.25
+		infantry_accuracy = 0.15
+	}
+}
+
+tech KRUPP_ARTILLERY {
+	name = "TECH_KRUPP_ARTILLERY_NAME"
+	desc = "TECH_KRUPP_ARTILLERY_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 500.0
+	start_tech = yes
+
+	effect {
+		artillery_attack = 0.20
+		artillery_range = 0.15
+	}
+
+	unlocks {
+		STEEL_BREECH_ARTILLERY
+	}
+}
+
+tech STEEL_BREECH_ARTILLERY {
+	name = "TECH_STEEL_BREECH_NAME"
+	desc = "TECH_STEEL_BREECH_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 800.0
+	prerequisites = [ KRUPP_ARTILLERY BESSEMER_PROCESS ]
+
+	effect {
+		artillery_attack = 0.25
+		artillery_range = 0.20
+		artillery_reliability = 0.15
+	}
+
+	unlocks {
+		QUICK_FIRING_ARTILLERY
+	}
+}
+
+tech QUICK_FIRING_ARTILLERY {
+	name = "TECH_QF_ARTILLERY_NAME"
+	desc = "TECH_QF_ARTILLERY_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_3
+	base_cost = 1100.0
+	prerequisites = [ STEEL_BREECH_ARTILLERY ]
+
+	effect {
+		artillery_fire_rate = 0.30
+		artillery_attack = 0.15
+	}
+}
+
+tech MODERN_LOGISTICS {
+	name = "TECH_MODERN_LOGISTICS_NAME"
+	desc = "TECH_MODERN_LOGISTICS_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 350.0
+
+	effect {
+		army_supply_range = 0.20
+		reinforcement_speed = 0.15
+		attrition = -0.10
+	}
+
+	unlocks {
+		RAILWAY_LOGISTICS
+	}
+}
+
+tech RAILWAY_LOGISTICS {
+	name = "TECH_RAILWAY_LOGISTICS_NAME"
+	desc = "TECH_RAILWAY_LOGISTICS_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 650.0
+	prerequisites = [ MODERN_LOGISTICS RAILWAY_EXPANSION ]
+
+	effect {
+		army_supply_range = 0.30
+		mobilization_speed = 0.25
+		strategic_movement = 0.30
+	}
+}
+
+tech MOUNTAIN_WARFARE_EXPERTS {
+	name = "TECH_MOUNTAIN_WARFARE_NAME"
+	desc = "TECH_MOUNTAIN_WARFARE_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 450.0
+
+	effect {
+		mountain_attack = 0.20
+		mountain_defense = 0.25
+		mountain_attrition = -0.15
+		supply_mountain = 0.10
+	}
+}
+
+tech AMPHIBIOUS_LANDINGS {
+	name = "TECH_AMPHIBIOUS_NAME"
+	desc = "TECH_AMPHIBIOUS_DESC"
+	category = ARMY_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 750.0
+	prerequisites = [ MODERN_LOGISTICS NAVAL_LANDING_BOATS ]
+
+	effect {
+		amphibious_attack = 0.20
+		landing_organization = 0.25
+	}
+}
+
+# ─── Navy ───────────────────────────────────────────────────────────────────
+
+tech IRONCLAD_WARSHIPS {
+	name = "TECH_IRONCLAD_NAME"
+	desc = "TECH_IRONCLAD_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 500.0
+	start_tech = yes
+
+	effect {
+		capital_ship_armor = 0.20
+		capital_ship_attack = 0.10
+		ship_building_cost = 0.05
+	}
+
+	unlocks {
+		STEEL_HULL_WARSHIPS
+	}
+}
+
+tech STEEL_HULL_WARSHIPS {
+	name = "TECH_STEEL_HULL_NAME"
+	desc = "TECH_STEEL_HULL_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 850.0
+	prerequisites = [ IRONCLAD_WARSHIPS BESSEMER_PROCESS ]
+
+	effect {
+		capital_ship_armor = 0.30
+		capital_ship_speed = 0.15
+		ship_durability = 0.20
+	}
+
+	unlocks {
+		PROTECTED_CRUISER_DESIGN
+	}
+}
+
+tech PROTECTED_CRUISER_DESIGN {
+	name = "TECH_PROTECTED_CRUISER_NAME"
+	desc = "TECH_PROTECTED_CRUISER_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 800.0
+	prerequisites = [ STEEL_HULL_WARSHIPS ]
+
+	effect {
+		cruiser_armor = 0.25
+		cruiser_speed = 0.20
+		cruiser_range = 0.15
+	}
+
+	unlocks {
+		ARMORED_CRUISER
+	}
+}
+
+tech ARMORED_CRUISER {
+	name = "TECH_ARMORED_CRUISER_NAME"
+	desc = "TECH_ARMORED_CRUISER_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_3
+	base_cost = 1300.0
+	prerequisites = [ PROTECTED_CRUISER_DESIGN ]
+
+	effect {
+		cruiser_armor = 0.30
+		cruiser_attack = 0.25
+		naval_power_projection = 0.20
+	}
+}
+
+tech NAVAL_BREECH_LOADERS {
+	name = "TECH_NAVAL_BREECH_NAME"
+	desc = "TECH_NAVAL_BREECH_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 450.0
+	start_tech = yes
+
+	effect {
+		naval_gun_accuracy = 0.15
+		naval_fire_rate = 0.10
+	}
+
+	unlocks {
+		QUICK_FIRING_NAVAL_GUNS
+	}
+}
+
+tech QUICK_FIRING_NAVAL_GUNS {
+	name = "TECH_QF_NAVAL_GUNS_NAME"
+	desc = "TECH_QF_NAVAL_GUNS_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 900.0
+	prerequisites = [ NAVAL_BREECH_LOADERS ]
+
+	effect {
+		naval_fire_rate = 0.25
+		naval_gun_accuracy = 0.15
+	}
+}
+
+tech TORPEDO_BOAT_TECH {
+	name = "TECH_TORPEDO_BOAT_NAME"
+	desc = "TECH_TORPEDO_BOAT_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 550.0
+
+	effect {
+		torpedo_attack = 0.20
+		small_craft_speed = 0.15
+	}
+
+	unlocks {
+		SELF_PROPELLED_TORPEDO
+	}
+}
+
+tech SELF_PROPELLED_TORPEDO {
+	name = "TECH_SELF_PROPELLED_TORPEDO_NAME"
+	desc = "TECH_SELF_PROPELLED_TORPEDO_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 750.0
+	prerequisites = [ TORPEDO_BOAT_TECH ]
+
+	effect {
+		torpedo_attack = 0.35
+		torpedo_range = 0.25
+		torpedo_reliability = 0.15
+	}
+}
+
+tech NAVAL_LANDING_BOATS {
+	name = "TECH_NAVAL_LANDING_NAME"
+	desc = "TECH_NAVAL_LANDING_DESC"
+	category = NAVAL_TECH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 300.0
+
+	effect {
+		naval_invasion_speed = 0.20
+		landing_capacity = 0.15
+	}
+}

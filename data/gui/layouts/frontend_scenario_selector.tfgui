@@ -1,22 +1,171 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  data/gui/layouts/frontend_scenario_selector.tfgui — v2 mejorado
+#  Selector de escenario con bookmarks dinámicos — Relicta History Engine
+# ═══════════════════════════════════════════════════════════════════════════
+
 guilayout FRONTEND_SCENARIO_SELECTOR {
 	visible = true
+
+	# ── Fondo ────────────────────────────────────────────────────────────────
 	scenario_background {
-        clipping    = false
-    }
+		clipping = false
+	}
+
+	# ── Panel superior — título ──────────────────────────────────────────────
 	
-	mainmenu_panel_lowerleft {
-		main_lobby_button = {
-			pos = [0, 100]
-			name = exit_button
-			action      = sp_back
-            interactive = true
-			text = "BACK_MAINMENU"
+	header_bar {
+		scenario_title_panel {
+		type   = panel
+		anchor = TC
+		origo  = TC
+		pos    = [ 0, 30 ]
+		size   = [ 600, 60 ]
+		visible = true
+		clipping = false
+
+			scenario_title_label {
+				type       = label
+				anchor     = CC
+				origo      = CC
+				pos        = [ 0, 0 ]
+				size       = [ 500, 50 ]
+				text       = "FRONTEND_SCENARIO_SELECT_TITLE"
+				font       = "default_large"
+				text_align = center
+				visible    = true
+				color      = [ 0.9, 0.85, 0.4 ]
+			}
 		}
 	}
+	# ── Panel central — lista de bookmarks ───────────────────────────────────
+	scenario_bookmark_list {
+		type    = panel
+		anchor  = CC
+		origo   = CC
+		pos     = [ 0, -80 ]
+		size    = [ 1920, 1000 ]
+		visible = true
+		clipping = true
+
+		
+
+		panel_papel {
+			size = [1800, 920]
+			pos = [60, 150]
+			origo = CC
+			anchor = CC
+			
+			
+			# Labels de bookmarks — se llenan desde C#
+		bookmark_item_0 {
+			type        = button
+			name        = "bookmark_btn_0"
+			anchor      = UpperLeft
+			origo       = UpperLeft
+			pos         = [ 20, 20 ]
+			size        = [ 420, 42 ]
+			text        = ""
+			font        = "hoi_26mbs"
+			text_align  = left
+			action      = "bookmark_0"
+			interactive = true
+			visible     = false
+		}
+		bookmark_item_1 {
+			type        = button
+			name        = "bookmark_btn_1"
+			anchor      = UpperLeft
+			origo       = UpperLeft
+			pos         = [ 20, 70 ]
+			size        = [ 420, 42 ]
+			text        = ""
+			font        = "hoi_26mbs"
+			text_align  = left
+			action      = "bookmark_1"
+			interactive = true
+			visible     = false
+		}
+		bookmark_item_2 {
+			type        = button
+			name        = "bookmark_btn_2"
+			anchor      = UpperLeft
+			origo       = UpperLeft
+			pos         = [ 20, 120 ]
+			size        = [ 420, 42 ]
+			text        = ""
+			font        = "hoi_26mbs"
+			text_align  = left
+			action      = "bookmark_2"
+			interactive = true
+			visible     = false
+		}
+		bookmark_item_3 {
+			type        = button
+			name        = "bookmark_btn_3"
+			anchor      = UpperLeft
+			origo       = UpperLeft
+			pos         = [ 20, 170 ]
+			size        = [ 420, 42 ]
+			text        = ""
+			font        = "hoi_26mbs"
+			text_align  = left
+			action      = "bookmark_3"
+			interactive = true
+			visible     = false
+		}
+		bookmark_item_4 {
+			type        = button
+			name        = "bookmark_btn_4"
+			anchor      = UpperLeft
+			origo       = UpperLeft
+			pos         = [ 20, 220 ]
+			size        = [ 420, 42 ]
+			text        = ""
+			font        = "hoi_26mbs"
+			text_align  = left
+			action      = "bookmark_4"
+			interactive = true
+			visible     = false
+		}
+			
+			# ── Descripción del bookmark seleccionado ──────────────────────────
+			bookmark_desc_label {
+				type       = label
+				name       = "bookmark_desc"
+				anchor     = CC
+				origo      = CC
+				pos        = [ 25, 0 ]
+				size       = [ 1700, 512 ]
+				text       = ""
+				font       = "default_small"
+				text_align = left
+				visible    = true
+				color      = [ 0.8, 0.8, 0.7 ]
+			}
+		}
+		
+	}
+
+	# ── Panel inferior izquierdo — botón volver ──────────────────────────────
+	mainmenu_panel_lowerleft {
+		main_lobby_button {
+			pos         = [ 0, 100 ]
+			name        = exit_button
+			action      = sp_back
+			interactive = true
+			text        = "BACK_MAINMENU"
+		}
+	}
+
+	# ── Panel inferior derecho — botón jugar ─────────────────────────────────
 	mainmenu_panel_lowerright {
-		main_lobby_button = {
-			pos = [0, 100]
-			action = start_game
+		main_lobby_button {
+			name        = play_button
+			pos         = [ 0, 100 ]
+			size        = [ 240, 48 ]
+			text        = "FRONTEND_PLAY"
+			action      = start_game
+			interactive = true
 		}
 	}
 }

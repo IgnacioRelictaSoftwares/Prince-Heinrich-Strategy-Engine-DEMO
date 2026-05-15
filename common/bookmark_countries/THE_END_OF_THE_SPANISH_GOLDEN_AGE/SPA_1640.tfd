@@ -1,6 +1,6 @@
 bookmark_country SPA{
 	name = "SPA_1640_NAME"
-	counntry_desc = "SPA_1640_DESC"
+	country_desc = "SPA_1640_DESC"
 	leader = "Felipe_IV_SPAIN"
 	leader_nick = "THE_PLANET_KING_NICK"
 	

@@ -1,0 +1,231 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  technologies/tech_mining_industry.tfd — Relicta History Engine
+#  Tecnologías mineras e industriales, era del salitre (1886)
+# ═══════════════════════════════════════════════════════════════════════════
+
+tech BASIC_MINING_TECHNIQUES {
+	name = "TECH_BASIC_MINING_NAME"
+	desc = "TECH_BASIC_MINING_DESC"
+	category = MINING
+	era = INDUSTRIAL_ERA_1
+	base_cost = 300.0
+	start_tech = yes
+
+	effect {
+		mining_output = 0.10
+		resource_extraction_speed = 0.10
+	}
+
+	unlocks {
+		SHALLOW_SHAFT_MINING
+		ORE_PROCESSING_BASIC
+	}
+}
+
+tech SHALLOW_SHAFT_MINING {
+	name = "TECH_SHALLOW_SHAFT_NAME"
+	desc = "TECH_SHALLOW_SHAFT_DESC"
+	category = MINING
+	era = INDUSTRIAL_ERA_1
+	base_cost = 450.0
+	prerequisites = [ BASIC_MINING_TECHNIQUES ]
+
+	effect {
+		copper_output = 0.15
+		silver_output = 0.10
+		gold_output = 0.10
+	}
+
+	unlocks {
+		DEEP_SHAFT_MINING
+	}
+}
+
+tech ORE_PROCESSING_BASIC {
+	name = "TECH_ORE_PROCESSING_NAME"
+	desc = "TECH_ORE_PROCESSING_DESC"
+	category = MINING
+	era = INDUSTRIAL_ERA_1
+	base_cost = 400.0
+	prerequisites = [ BASIC_MINING_TECHNIQUES ]
+
+	effect {
+		refining_efficiency = 0.12
+		industrial_waste = -0.10
+	}
+}
+
+tech DEEP_SHAFT_MINING {
+	name = "TECH_DEEP_SHAFT_NAME"
+	desc = "TECH_DEEP_SHAFT_DESC"
+	category = MINING
+	era = INDUSTRIAL_ERA_2
+	base_cost = 700.0
+	prerequisites = [ SHALLOW_SHAFT_MINING ]
+
+	effect {
+		mining_output = 0.20
+		copper_output = 0.25
+		coal_output = 0.15
+	}
+
+	unlocks {
+		HARD_ROCK_MINING
+	}
+}
+
+tech HARD_ROCK_MINING {
+	name = "TECH_HARD_ROCK_MINING_NAME"
+	desc = "TECH_HARD_ROCK_MINING_DESC"
+	category = MINING
+	era = INDUSTRIAL_ERA_2
+	base_cost = 800.0
+	prerequisites = [ DEEP_SHAFT_MINING ]
+
+	effect {
+		mining_output = 0.25
+		iron_output = 0.20
+		molybdenum_output = 0.15
+	}
+}
+
+# ─── Nitrate specific ───────────────────────────────────────────────────────
+
+tech NITRATE_SHOVEL_EXTRACTION {
+	name = "TECH_NITRATE_SHOVEL_NAME"
+	desc = "TECH_NITRATE_SHOVEL_DESC"
+	category = NITRATE_INDUSTRY
+	era = INDUSTRIAL_ERA_1
+	base_cost = 200.0
+	start_tech = yes
+
+	effect {
+		nitrate_output = 0.05
+	}
+
+	unlocks {
+		NITRATE_MECHANICAL_EXTRACTION
+	}
+}
+
+tech NITRATE_MECHANICAL_EXTRACTION {
+	name = "TECH_NITRATE_MECHANICAL_NAME"
+	desc = "TECH_NITRATE_MECHANICAL_DESC"
+	category = NITRATE_INDUSTRY
+	era = INDUSTRIAL_ERA_1
+	base_cost = 500.0
+	prerequisites = [ NITRATE_SHOVEL_EXTRACTION ]
+
+	effect {
+		nitrate_output = 0.30
+		nitrate_processing_speed = 0.25
+	}
+
+	unlocks {
+		SHANKS_PROCESS
+	}
+}
+
+tech SHANKS_PROCESS {
+	name = "TECH_SHANKS_PROCESS_NAME"
+	desc = "TECH_SHANKS_PROCESS_DESC"
+	category = NITRATE_INDUSTRY
+	era = INDUSTRIAL_ERA_2
+	base_cost = 750.0
+	prerequisites = [ NITRATE_MECHANICAL_EXTRACTION ]
+
+	effect {
+		nitrate_output = 0.40
+		nitrate_purity = 0.20
+		iodine_byproduct = 0.15
+	}
+
+	unlocks {
+		GUGGENHEIM_PROCESS
+	}
+}
+
+tech GUGGENHEIM_PROCESS {
+	name = "TECH_GUGGENHEIM_PROCESS_NAME"
+	desc = "TECH_GUGGENHEIM_PROCESS_DESC"
+	category = NITRATE_INDUSTRY
+	era = INDUSTRIAL_ERA_3
+	base_cost = 1200.0
+	prerequisites = [ SHANKS_PROCESS ]
+
+	effect {
+		nitrate_output = 0.55
+		nitrate_purity = 0.35
+		iodine_byproduct = 0.30
+	}
+}
+
+# ─── Copper specific ────────────────────────────────────────────────────────
+
+tech COPPER_SMELTING_ADVANCED {
+	name = "TECH_COPPER_SMELTING_NAME"
+	desc = "TECH_COPPER_SMELTING_DESC"
+	category = METALLURGY
+	era = INDUSTRIAL_ERA_1
+	base_cost = 550.0
+	prerequisites = [ ORE_PROCESSING_BASIC ]
+
+	effect {
+		copper_output = 0.20
+		copper_purity = 0.15
+	}
+
+	unlocks {
+		ELECTROLYTIC_REFINING
+	}
+}
+
+tech ELECTROLYTIC_REFINING {
+	name = "TECH_ELECTROLYTIC_REFINING_NAME"
+	desc = "TECH_ELECTROLYTIC_REFINING_DESC"
+	category = METALLURGY
+	era = INDUSTRIAL_ERA_2
+	base_cost = 900.0
+	prerequisites = [ COPPER_SMELTING_ADVANCED ]
+
+	effect {
+		copper_purity = 0.30
+		copper_output = 0.15
+		gold_byproduct = 0.10
+		silver_byproduct = 0.10
+	}
+}
+
+# ─── Steel and Iron ─────────────────────────────────────────────────────────
+
+tech BESSEMER_PROCESS {
+	name = "TECH_BESSEMER_PROCESS_NAME"
+	desc = "TECH_BESSEMER_PROCESS_DESC"
+	category = METALLURGY
+	era = INDUSTRIAL_ERA_1
+	base_cost = 600.0
+
+	effect {
+		steel_output = 0.25
+		steel_cost = -0.15
+		iron_consumption = 0.10
+	}
+
+	unlocks {
+		OPEN_HEARTH_PROCESS
+	}
+}
+
+tech OPEN_HEARTH_PROCESS {
+	name = "TECH_OPEN_HEARTH_PROCESS_NAME"
+	desc = "TECH_OPEN_HEARTH_PROCESS_DESC"
+	category = METALLURGY
+	era = INDUSTRIAL_ERA_2
+	base_cost = 950.0
+	prerequisites = [ BESSEMER_PROCESS ]
+
+	effect {
+		steel_output = 0.35
+		steel_quality = 0.20
+	}
+}

@@ -1,0 +1,273 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  governments/governments_chile.tfd — Relicta History Engine
+#  Sistemas de gobierno y facciones políticas de Chile, 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+government PRESIDENTIALISM_PORTALINO {
+	name = "PRESIDENTIALISM_PORTALINO_NAME"
+	desc = "PRESIDENTIALISM_PORTALINO_DESC"
+
+	# Estructura constitucional: presidencialismo fuerte con parlamento
+	head_of_state_title = PRESIDENTE_DE_LA_REPUBLICA
+	head_of_government   = PRESIDENTE_DE_LA_REPUBLICA
+
+	term_length  = 5      # años
+	max_terms    = 1      # no reelección inmediata (Constitución 1833)
+
+	legislature  = BICAMERAL
+	upper_house  = SENADO
+	lower_house  = CAMARA_DE_DIPUTADOS
+
+	# Atributos mecánicos
+	centralization = 0.65     # Presidencialismo fuerte pero con élites regionales
+	authority      = 0.70
+	legitimacy     = 0.72
+
+	# Facciones políticas activas en 1886
+	factions = [
+		LIBERAL_REFORMISTA
+		LIBERAL_MODERADO
+		LIBERAL_CONSERVADOR
+		LIBERAL_RADICAL
+		CONSERVADOR_CLERICAL
+		NACIONALISTA
+	]
+
+	# Leyes iniciales
+	active_laws = [
+		LAW_CENTRALIZED_GOVERNMENT
+		LAW_CENSUS_SUFFRAGE
+		LAW_PROFESSIONAL_ARMY
+		LAW_LAISSEZ_FAIRE_ECONOMY
+		LAW_PUBLIC_EDUCATION_STATE
+		LAW_SECULAR_CEMETERIES
+		LAW_NITRATE_EXPORT_TAX
+	]
+}
+
+# ─── Facciones ──────────────────────────────────────────────────────────────
+
+faction LIBERAL_REFORMISTA {
+	name = "FACTION_LIBERAL_REFORMISTA_NAME"
+	desc = "FACTION_LIBERAL_REFORMISTA_DESC"
+	leader = JOSE_MANUEL_BALMACEDA
+	color = { 220 30 40 }
+
+	ideals = [ industrialization, state_led_development, public_works, secularization ]
+	support_base = [ intelligentsia, industrialists, middle_class ]
+	popularity = 38.0
+	seats = 0.35
+}
+
+faction LIBERAL_MODERADO {
+	name = "FACTION_LIBERAL_MODERADO_NAME"
+	desc = "FACTION_LIBERAL_MODERADO_DESC"
+	leader = ENRIQUE_SALVADOR_SANFUENTES
+	color = { 255 200 50 }
+
+	ideals = [ fiscal_responsibility, foreign_investment, gradual_reform ]
+	support_base = [ merchants, bankers, professionals ]
+	popularity = 28.0
+	seats = 0.25
+}
+
+faction LIBERAL_CONSERVADOR {
+	name = "FACTION_LIBERAL_CONSERVADOR_NAME"
+	desc = "FACTION_LIBERAL_CONSERVADOR_DESC"
+	leader = RAMON_BARROS_LUCO
+	color = { 50 150 220 }
+
+	ideals = [ compromise, elite_consensus, order_before_liberty ]
+	support_base = [ landowners, senior_bureaucrats, high_clergy ]
+	popularity = 20.0
+	seats = 0.18
+}
+
+faction LIBERAL_RADICAL {
+	name = "FACTION_LIBERAL_RADICAL_NAME"
+	desc = "FACTION_LIBERAL_RADICAL_DESC"
+	leader = DOMINGO_SANTA_MARIA
+	color = { 180 40 40 }
+
+	ideals = [ radical_secularization, anti_clerical, meritocracy, popular_education ]
+	support_base = [ teachers, journalists, freemasons, artisans ]
+	popularity = 15.0
+	seats = 0.10
+}
+
+faction CONSERVADOR_CLERICAL {
+	name = "FACTION_CONSERVADOR_CLERICAL_NAME"
+	desc = "FACTION_CONSERVADOR_CLERICAL_DESC"
+	leader = MANUEL_JOSE_IRARRAZAVAL
+	color = { 30 30 140 }
+
+	ideals = [ catholic_supremacy, decentralization, traditional_values, elite_rule ]
+	support_base = [ clergy, rural_landowners, peasants, aristocracy ]
+	popularity = 22.0
+	seats = 0.30
+}
+
+faction NACIONALISTA {
+	name = "FACTION_NACIONALISTA_NAME"
+	desc = "FACTION_NACIONALISTA_DESC"
+	leader = JUAN_DE_DIOS_ALDUNATE
+	color = { 200 120 30 }
+
+	ideals = [ national_industry, military_strength, territorial_integrity, state_autarky ]
+	support_base = [ military_officers, small_industrialists, veterans ]
+	popularity = 12.0
+	seats = 0.07
+}
+
+# ─── Leyes disponibles ──────────────────────────────────────────────────────
+
+law LAW_CENTRALIZED_GOVERNMENT {
+	name = "LAW_CENTRALIZED_GOVERNMENT_NAME"
+	desc = "LAW_CENTRALIZED_GOVERNMENT_DESC"
+	category = government_structure
+	effect {
+		centralization = 0.15
+		tax_efficiency = 0.10
+		regional_autonomy = -0.10
+	}
+}
+
+law LAW_CENSUS_SUFFRAGE {
+	name = "LAW_CENSUS_SUFFRAGE_NAME"
+	desc = "LAW_CENSUS_SUFFRAGE_DESC"
+	category = electoral_system
+	effect {
+		suffrage = 0.12       # Solo ~12% de la población vota (hombres alfabetos con renta)
+		upper_class_power = 0.25
+		legitimacy = -0.05
+	}
+}
+
+law LAW_PROFESSIONAL_ARMY {
+	name = "LAW_PROFESSIONAL_ARMY_NAME"
+	desc = "LAW_PROFESSIONAL_ARMY_DESC"
+	category = military_organization
+	effect {
+		military_experience_gain = 0.15
+		army_morale = 0.20
+		recruitment_cost = 0.10
+	}
+}
+
+law LAW_LAISSEZ_FAIRE_ECONOMY {
+	name = "LAW_LAISSEZ_FAIRE_ECONOMY_NAME"
+	desc = "LAW_LAISSEZ_FAIRE_ECONOMY_DESC"
+	category = economic_policy
+	effect {
+		private_investment = 0.30
+		foreign_trade = 0.25
+		state_control = -0.20
+	}
+}
+
+law LAW_PUBLIC_EDUCATION_STATE {
+	name = "LAW_PUBLIC_EDUCATION_STATE_NAME"
+	desc = "LAW_PUBLIC_EDUCATION_STATE_DESC"
+	category = education
+	effect {
+		literacy_rate = 0.02   # Mensual
+		church_influence = -0.10
+		research_speed = 0.05
+	}
+}
+
+law LAW_SECULAR_CEMETERIES {
+	name = "LAW_SECULAR_CEMETERIES_NAME"
+	desc = "LAW_SECULAR_CEMETERIES_DESC"
+	category = religious_policy
+	effect {
+		church_influence = -0.08
+		stability = -0.02      # Resistencia conservadora
+		support_LIBERAL_RADICAL = 0.10
+	}
+}
+
+law LAW_NITRATE_EXPORT_TAX {
+	name = "LAW_NITRATE_EXPORT_TAX_NAME"
+	desc = "LAW_NITRATE_EXPORT_TAX_DESC"
+	category = taxation
+	effect {
+		export_tax_nitrate = 0.25
+		national_income = 0.40
+		foreign_investor_opinion = -0.10
+	}
+}
+
+# ─── Leyes adicionales que se pueden promulgar ──────────────────────────────
+
+law LAW_UNIVERSAL_MALE_SUFFRAGE {
+	name = "LAW_UNIVERSAL_MALE_SUFFRAGE_NAME"
+	desc = "LAW_UNIVERSAL_MALE_SUFFRAGE_DESC"
+	category = electoral_system
+	prerequisite = { NOT { has_law = LAW_CENSUS_SUFFRAGE } }
+	effect {
+		suffrage = 0.45
+		upper_class_power = -0.30
+		legitimacy = 0.10
+		support_LIBERAL_REFORMISTA = 0.15
+	}
+}
+
+law LAW_NATIONAL_BANK {
+	name = "LAW_NATIONAL_BANK_NAME"
+	desc = "LAW_NATIONAL_BANK_DESC"
+	category = economic_policy
+	effect {
+		inflation_control = 0.20
+		credit_availability = 0.25
+		foreign_bank_influence = -0.15
+	}
+}
+
+law LAW_COMPULSORY_PRIMARY_EDUCATION {
+	name = "LAW_COMPULSORY_PRIMARY_EDUCATION_NAME"
+	desc = "LAW_COMPULSORY_PRIMARY_EDUCATION_DESC"
+	category = education
+	effect {
+		literacy_rate = 0.05
+		state_expenses = 0.08
+		research_speed = 0.10
+	}
+}
+
+law LAW_STATE_RAILWAY_MONOPOLY {
+	name = "LAW_STATE_RAILWAY_MONOPOLY_NAME"
+	desc = "LAW_STATE_RAILWAY_MONOPOLY_DESC"
+	category = infrastructure
+	effect {
+		railway_construction_speed = 0.30
+		private_railway_investment = -0.20
+		state_control = 0.15
+		foreign_bond_holders_opinion = 0.10
+	}
+}
+
+law LAW_CIVIL_MARRIAGE {
+	name = "LAW_CIVIL_MARRIAGE_NAME"
+	desc = "LAW_CIVIL_MARRIAGE_DESC"
+	category = religious_policy
+	effect {
+		church_influence = -0.15
+		support_CONSERVADOR_CLERICAL = -0.20
+		support_LIBERAL_RADICAL = 0.15
+		stability = -0.08
+	}
+}
+
+law LAW_NITRATE_NATIONALIZATION {
+	name = "LAW_NITRATE_NATIONALIZATION_NAME"
+	desc = "LAW_NITRATE_NATIONALIZATION_DESC"
+	category = economic_policy
+	prerequisite = { has_law = LAW_NITRATE_EXPORT_TAX }
+	effect {
+		nitrate_income = 1.0      # 100% estatal
+		foreign_investor_opinion = -0.30
+		national_income = 0.60
+		diplomatic_tension_GBR = 0.20  # Intereses británicos afectados
+	}
+}

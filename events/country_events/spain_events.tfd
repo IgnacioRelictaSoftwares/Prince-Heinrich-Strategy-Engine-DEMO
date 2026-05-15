@@ -60,7 +60,7 @@ event SPAIN_SILVER_FLEET {
     desc    = "SPAIN_SILVER_FLEET_DESC"
     picture = "GFX_event_silver_fleet"
     is_unique = false
-    mean_time = 5.0    # Años de media entre disparos
+    mean_time = 1825.0  # ~5 años
 
     trigger {
         AND {

@@ -39,7 +39,7 @@ component mainmenu_panel_bottom {
 component mainmenu_panel_upperleft {
     type   = panel
     size   = [256, 768]
-    anchor = CL
+    anchor = UpperLeft
     pos    = [0, -1]
 }
 
@@ -62,7 +62,7 @@ component mainmenu_panel_lowerright {
 component mainmenu_panel_upperright {
     type   = panel
     size   = [256, 768]
-    anchor = CR
+    anchor = UpperRight
     pos    = [-256, -1]
 }
 

@@ -1,0 +1,53 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  dynasties/dynasties_chile.tfd — Relicta History Engine
+#  Familias y dinastías políticas de Chile, 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+dynasty BALMACEDA_FERNANDEZ {
+	name = "DYNASTY_BALMACEDA_NAME"
+	desc = "DYNASTY_BALMACEDA_DESC"
+	founder = JOSE_MANUEL_BALMACEDA
+	coat_of_arms = "GFX_coa_balmaceda"
+	prestige =  250.0
+
+	members = [
+		JOSE_MANUEL_BALMACEDA
+		PEDRO_BALMACEDA
+	]
+}
+
+dynasty BARROS_FAMILY {
+	name = "DYNASTY_BARROS_NAME"
+	desc = "DYNASTY_BARROS_DESC"
+	founder = RAMON_BARROS_LUCO
+	prestige =  190.0
+
+	members = [ RAMON_BARROS_LUCO ]
+}
+
+dynasty SANFUENTES_FAMILY {
+	name = "DYNASTY_SANFUENTES_NAME"
+	desc = "DYNASTY_SANFUENTES_DESC"
+	founder = ENRIQUE_SALVADOR_SANFUENTES
+	prestige =  8.0
+
+	members = [ ENRIQUE_SALVADOR_SANFUENTES ]
+}
+
+dynasty SANTA_MARIA_FAMILY {
+	name = "DYNASTY_SANTA_MARIA_NAME"
+	desc = "DYNASTY_SANTA_MARIA_DESC"
+	founder = DOMINGO_SANTA_MARIA
+	prestige =  15.0
+
+	members = [ DOMINGO_SANTA_MARIA ]
+}
+
+dynasty PRAT_CARVAJAL {
+	name = "DYNASTY_PRAT_NAME"
+	desc = "DYNASTY_PRAT_DESC"
+	founder = ARTURO_PRAT_CHACON
+	prestige = 500.0
+
+	members = [ ARTURO_PRAT_CHACON ]
+}

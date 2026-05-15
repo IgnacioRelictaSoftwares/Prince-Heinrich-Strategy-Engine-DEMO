@@ -1,0 +1,470 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  events/country_events/chile_events.tfd — Relicta History Engine
+#  Eventos históricos de Chile, era de Balmaceda (1886-1891)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Boom del Salitre ───────────────────────────────────────────────────────
+event CHL_NITRATE_BOOM_1886 {
+	title   = "CHL_NITRATE_BOOM_TITLE"
+	desc    = "CHL_NITRATE_BOOM_DESC"
+	picture = "GFX_event_nitrate_works"
+	mean_time = 180
+	is_unique = false
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 18.9.1886
+			date <= 18.9.1888
+			NOT { has_flag = NITRATE_BOOM_STARTED }
+		}
+	}
+
+	option {
+		name = "CHL_NITRATE_BOOM_OPT_A"
+		# Invertir en infraestructura pública
+		effect {
+			add_flag = NITRATE_BOOM_STARTED
+			add_stability = 0.05
+			infrastructure_spending = 0.15
+		}
+	}
+
+	option {
+		name = "CHL_NITRATE_BOOM_OPT_B"
+		# Reducir impuestos al salitre para atraer inversión extranjera
+		effect {
+			add_flag = NITRATE_BOOM_STARTED
+			nitrate_tax = -0.10
+			foreign_investment = 0.25
+		}
+	}
+}
+
+# ── Ferrocarril Longitudinal ───────────────────────────────────────────────
+event CHL_LONGITUDINAL_RAILWAY {
+	title   = "CHL_RAILWAY_TITLE"
+	desc    = "CHL_RAILWAY_DESC"
+	picture = "GFX_event_railway"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.1.1887
+			date <= 1.1.1890
+			treasury >= 500000.0
+			NOT { has_flag = LONGITUDINAL_RAILWAY }
+		}
+	}
+
+	option {
+		name = "CHL_RAILWAY_OPT_A"
+		# Financiar con bonos del Estado (Plan Balmaceda)
+		effect {
+			set_flag = LONGITUDINAL_RAILWAY
+			treasury = -500000.0
+			infrastructure_growth = 0.20
+			national_debt = 0.10
+			prestige = 5.0
+		}
+	}
+
+	option {
+		name = "CHL_RAILWAY_OPT_B"
+		# Entregar concesiones a privados británicos
+		effect {
+			set_flag = LONGITUDINAL_RAILWAY
+			treasury = -100000.0
+			infrastructure_growth = 0.10
+			british_influence = 0.15
+			foreign_investment = 0.15
+		}
+	}
+
+	option {
+		name = "CHL_RAILWAY_OPT_C"
+		# Postergar — demasiado caro
+		effect {
+			prestige = -3.0
+			support_LIBERAL_REFORMISTA = -0.05
+		}
+	}
+}
+
+# ── Reforma Educacional ─────────────────────────────────────────────────────
+event CHL_EDUCATION_REFORM {
+	title   = "CHL_EDUCATION_REFORM_TITLE"
+	desc    = "CHL_EDUCATION_REFORM_DESC"
+	picture = "GFX_event_education"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.3.1887
+			date <= 1.3.1889
+			NOT { has_flag = EDUCATION_REFORM_DONE }
+		}
+	}
+
+	option {
+		name = "CHL_EDUCATION_REFORM_OPT_A"
+		# Fundar el Instituto Pedagógico y escuelas normales
+		effect {
+			set_flag = EDUCATION_REFORM_DONE
+			treasury = -200000.0
+			literacy_rate = 0.03
+			research_speed = 0.10
+			support_LIBERAL_REFORMISTA = 0.10
+			support_CONSERVADOR_CLERICAL = -0.05
+		}
+	}
+
+	option {
+		name = "CHL_EDUCATION_REFORM_OPT_B"
+		# Dejar la educación en manos de la Iglesia (como antes)
+		effect {
+			set_flag = EDUCATION_REFORM_DONE
+			church_influence = 0.10
+			support_CONSERVADOR_CLERICAL = 0.10
+			support_LIBERAL_RADICAL = -0.10
+		}
+	}
+}
+
+# ── Tensión con Perú ───────────────────────────────────────────────────────
+event CHL_PERU_TACNA_ARICA_TENSION {
+	title   = "CHL_PERU_TENSION_TITLE"
+	desc    = "CHL_PERU_TENSION_DESC"
+	picture = "GFX_event_war_council"
+	is_unique = false
+	mean_time = 1095.0  # ~3 años
+
+	trigger {
+		AND {
+			owner = CHL
+			has_province = Arica
+			relation_PER <= 0.3
+			NOT { has_flag = TACNA_ARICA_RESOLVED }
+		}
+	}
+
+	option {
+		name = "CHL_PERU_TENSION_OPT_A"
+		# Mantener la posición chilena — no ceder
+		effect {
+			relation_PER = -0.10
+			nationalist_sentiment = 0.10
+			military_spending = 0.05
+			support_NACIONALISTA = 0.05
+		}
+	}
+
+	option {
+		name = "CHL_PERU_TENSION_OPT_B"
+		# Negociar un plebiscito (como prometió el Tratado de Ancón)
+		effect {
+			relation_PER = 0.10
+			international_prestige = 5.0
+			support_NACIONALISTA = -0.10
+			support_LIBERAL_MODERADO = 0.05
+			set_flag = PLESBISCITE_ON_TABLE
+		}
+	}
+}
+
+# ── Cuestión Social — Huelgas Obreras ──────────────────────────────────────
+event CHL_LABOR_UNREST {
+	title   = "CHL_LABOR_UNREST_TITLE"
+	desc    = "CHL_LABOR_UNREST_DESC"
+	picture = "GFX_event_workers"
+	is_unique = false
+	mean_time = 912.0   # ~2.5 años
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.6.1887
+			industrialization >= 0.15
+			stability <= 0.65
+			NOT { has_flag = LABOR_REFORM }
+		}
+	}
+
+	option {
+		name = "CHL_LABOR_UNREST_OPT_A"
+		# Reprimir las huelgas con el ejército
+		effect {
+			stability = -0.10
+			militancy = 0.15
+			industrial_output = -0.05
+		}
+	}
+
+	option {
+		name = "CHL_LABOR_UNREST_OPT_B"
+		# Negociar con los obreros — primeras leyes laborales
+		effect {
+			stability = 0.05
+			worker_conditions = 0.10
+			industrial_output = -0.02
+			support_LIBERAL_REFORMISTA = 0.05
+			industrialist_opinion = -0.05
+		}
+	}
+
+	option {
+		name = "CHL_LABOR_UNREST_OPT_C"
+		# Conceder aumentos salariales significativos
+		effect {
+			stability = 0.10
+			militancy = -0.15
+			industrial_cost = 0.10
+			worker_conditions = 0.20
+		}
+	}
+}
+
+# ── Banco Nacional — Fundación ──────────────────────────────────────────────
+event CHL_NATIONAL_BANK_DEBATE {
+	title   = "CHL_BANK_DEBATE_TITLE"
+	desc    = "CHL_BANK_DEBATE_DESC"
+	picture = "GFX_event_bank"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.9.1887
+			NOT { has_law = LAW_NATIONAL_BANK }
+			NOT { has_flag = BANK_DEBATE_DONE }
+		}
+	}
+
+	option {
+		name = "CHL_BANK_DEBATE_OPT_A"
+		# Crear el Banco Nacional (propuesta de Balmaceda)
+		effect {
+			set_flag = BANK_DEBATE_DONE
+			enact_law = LAW_NATIONAL_BANK
+			support_LIBERAL_REFORMISTA = 0.10
+			foreign_bank_opinion = -0.15
+			national_debt_management = 0.15
+		}
+	}
+
+	option {
+		name = "CHL_BANK_DEBATE_OPT_B"
+		# Mantener el sistema de bancos privados
+		effect {
+			set_flag = BANK_DEBATE_DONE
+			foreign_bank_opinion = 0.10
+			credit_availability = 0.05
+			support_CONSERVADOR_CLERICAL = 0.05
+		}
+	}
+}
+
+# ── Conflicto Iglesia-Estado ───────────────────────────────────────────────
+event CHL_CHURCH_STATE_CONFLICT {
+	title   = "CHL_CHURCH_STATE_TITLE"
+	desc    = "CHL_CHURCH_STATE_DESC"
+	picture = "GFX_event_cathedral"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.1.1888
+			has_law = LAW_SECULAR_CEMETERIES
+			church_influence >= 0.20
+			NOT { has_flag = CHURCH_CRISIS_1888 }
+		}
+	}
+
+	option {
+		name = "CHL_CHURCH_STATE_OPT_A"
+		# Mantener rumbo laico — el Estado prevalece
+		effect {
+			set_flag = CHURCH_CRISIS_1888
+			church_influence = -0.10
+			stability = -0.08
+			support_LIBERAL_RADICAL = 0.15
+			support_CONSERVADOR_CLERICAL = -0.15
+			relation_PAP = -0.20
+		}
+	}
+
+	option {
+		name = "CHL_CHURCH_STATE_OPT_B"
+		# Conciliación — permitir excepciones religiosas
+		effect {
+			set_flag = CHURCH_CRISIS_1888
+			stability = 0.05
+			support_LIBERAL_MODERADO = 0.05
+			relation_PAP = 0.10
+		}
+	}
+
+	option {
+		name = "CHL_CHURCH_STATE_OPT_C"
+		# Matrimonio civil obligatorio — ruptura total
+		effect {
+			set_flag = CHURCH_CRISIS_1888
+			enact_law = LAW_CIVIL_MARRIAGE
+			church_influence = -0.20
+			support_LIBERAL_RADICAL = 0.20
+			relation_PAP = -0.40
+		}
+	}
+}
+
+# ── Armada — Modernización ─────────────────────────────────────────────────
+event CHL_NAVAL_MODERNIZATION {
+	title   = "CHL_NAVAL_MODERNIZATION_TITLE"
+	desc    = "CHL_NAVAL_MODERNIZATION_DESC"
+	picture = "GFX_event_battleship"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.6.1889
+			treasury >= 800000.0
+			NOT { has_flag = NAVAL_MODERNIZATION }
+		}
+	}
+
+	option {
+		name = "CHL_NAVAL_OPT_A"
+		# Comprar un acorazado a astilleros británicos
+		effect {
+			set_flag = NAVAL_MODERNIZATION
+			treasury = -800000.0
+			navy_size = 0.10
+			capital_ship_count = 1
+			british_relation = 0.10
+			naval_prestige = 10.0
+		}
+	}
+
+	option {
+		name = "CHL_NAVAL_OPT_B"
+		# Construir en astilleros nacionales (más lento pero industrializa)
+		effect {
+			set_flag = NAVAL_MODERNIZATION
+			treasury = -500000.0
+			naval_industry = 0.15
+			industrial_growth = 0.05
+			ship_building_capacity = 0.10
+		}
+	}
+
+	option {
+		name = "CHL_NAVAL_OPT_C"
+		# No es prioritario — mantener la flota actual
+		effect {
+			set_flag = NAVAL_MODERNIZATION
+			naval_prestige = -5.0
+			military_spending = -0.05
+		}
+	}
+}
+
+# ── Inmigración Europea ────────────────────────────────────────────────────
+event CHL_IMMIGRATION_PUSH {
+	title   = "CHL_IMMIGRATION_TITLE"
+	desc    = "CHL_IMMIGRATION_DESC"
+	picture = "GFX_event_immigrants"
+	is_unique = false
+	mean_time = 1460.0  # ~4 años
+
+	trigger {
+		AND {
+			owner = CHL
+			stability >= 0.5
+			NOT { at_war = yes }
+			population <= 3000000
+		}
+	}
+
+	option {
+		name = "CHL_IMMIGRATION_OPT_A"
+		# Promover inmigración selectiva (Ley de Colonización)
+		effect {
+			population_growth = 0.10
+			culture_EUROPEAN_IMMIGRANT = 0.05
+			colonial_expansion = 0.05
+		}
+	}
+
+	option {
+		name = "CHL_IMMIGRATION_OPT_B"
+		# Puertas abiertas — sin restricciones
+		effect {
+			population_growth = 0.15
+			cultural_tension = 0.05
+			criminality = 0.02
+		}
+	}
+}
+
+# ── Crisis del 91 — Camino a la Guerra Civil ───────────────────────────────
+event CHL_CRISIS_1891 {
+	title   = "CHL_CRISIS_1891_TITLE"
+	desc    = "CHL_CRISIS_1891_DESC"
+	picture = "GFX_event_chile_crisis"
+	is_unique = true
+
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1.1.1891
+			legitimacy <= 0.5
+			stability <= 0.4
+			NOT { has_flag = CIVIL_WAR_AVOIDED }
+			NOT { has_flag = CIVIL_WAR_STARTED }
+		}
+	}
+
+	option {
+		name = "CHL_CRISIS_1891_OPT_A"
+		# Balmaceda cede ante el Congreso — evitar la guerra civil
+		effect {
+			set_flag = CIVIL_WAR_AVOIDED
+			presidential_power = -0.30
+			legislative_power = 0.30
+			stability = 0.15
+			support_LIBERAL_REFORMISTA = -0.25
+			support_CONSERVADOR_CLERICAL = 0.20
+		}
+	}
+
+	option {
+		name = "CHL_CRISIS_1891_OPT_B"
+		# Defender el presidencialismo — resistir al Congreso
+		effect {
+			set_flag = CIVIL_WAR_STARTED
+			stability = -0.30
+			presidential_power = 0.20
+			support_LIBERAL_REFORMISTA = 0.15
+			support_CONSERVADOR_CLERICAL = -0.25
+			army_loyalty = 0.10
+			navy_loyalty = -0.20
+		}
+	}
+
+	option {
+		name = "CHL_CRISIS_1891_OPT_C"
+		# Reforma constitucional — equilibrar poderes
+		effect {
+			set_flag = CIVIL_WAR_AVOIDED
+			presidential_power = -0.10
+			legislative_power = 0.15
+			stability = 0.10
+			legitimacy = 0.10
+			prestige = 5.0
+		}
+	}
+}

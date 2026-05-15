@@ -1,0 +1,353 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  technologies/tech_civil_industrial.tfd — Relicta History Engine
+#  Tecnologías civiles, infraestructura y comercio para Chile 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ─── Railroads ──────────────────────────────────────────────────────────────
+
+tech RAILWAY_EXPANSION {
+	name = "TECH_RAILWAY_EXPANSION_NAME"
+	desc = "TECH_RAILWAY_EXPANSION_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_1
+	base_cost = 500.0
+	start_tech = yes
+
+	effect {
+		railway_building_speed = 0.15
+		infrastructure_growth = 0.10
+		trade_capacity = 0.10
+	}
+
+	unlocks {
+		MOUNTAIN_RAILWAYS
+		RAILWAY_STANDARDIZATION
+	}
+}
+
+tech MOUNTAIN_RAILWAYS {
+	name = "TECH_MOUNTAIN_RAILWAYS_NAME"
+	desc = "TECH_MOUNTAIN_RAILWAYS_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_2
+	base_cost = 800.0
+	prerequisites = [ RAILWAY_EXPANSION MOUNTAIN_WARFARE_EXPERTS ]
+
+	effect {
+		mountain_province_infrastructure = 0.25
+		mining_output_remote = 0.15
+		trade_capacity = 0.10
+	}
+}
+
+tech RAILWAY_STANDARDIZATION {
+	name = "TECH_RAILWAY_STANDARDIZATION_NAME"
+	desc = "TECH_RAILWAY_STANDARDIZATION_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_2
+	base_cost = 600.0
+	prerequisites = [ RAILWAY_EXPANSION ]
+
+	effect {
+		railway_maintenance = -0.15
+		trade_capacity = 0.15
+		railway_building_cost = -0.10
+	}
+
+	unlocks {
+		TRANSANDINE_RAILWAY
+	}
+}
+
+tech TRANSANDINE_RAILWAY {
+	name = "TECH_TRANSANDINE_RAILWAY_NAME"
+	desc = "TECH_TRANSANDINE_RAILWAY_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_3
+	base_cost = 1500.0
+	prerequisites = [ MOUNTAIN_RAILWAYS RAILWAY_STANDARDIZATION ]
+
+	effect {
+		international_trade = 0.25
+		diplomatic_relations_ARG = 0.15
+		economic_growth = 0.10
+	}
+}
+
+# ─── Port and Maritime ──────────────────────────────────────────────────────
+
+tech PORT_MODERNIZATION {
+	name = "TECH_PORT_MODERNIZATION_NAME"
+	desc = "TECH_PORT_MODERNIZATION_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_1
+	base_cost = 450.0
+	start_tech = yes
+
+	effect {
+		port_capacity = 0.20
+		trade_throughput = 0.15
+		import_cost = -0.10
+	}
+
+	unlocks {
+		DRY_DOCK_FACILITIES
+	}
+}
+
+tech DRY_DOCK_FACILITIES {
+	name = "TECH_DRY_DOCK_NAME"
+	desc = "TECH_DRY_DOCK_DESC"
+	category = INFRASTRUCTURE
+	era = INDUSTRIAL_ERA_2
+	base_cost = 700.0
+	prerequisites = [ PORT_MODERNIZATION STEEL_HULL_WARSHIPS ]
+
+	effect {
+		naval_repair_speed = 0.25
+		ship_building_cost = -0.10
+		ship_building_capacity = 0.15
+	}
+}
+
+# ─── Communications ─────────────────────────────────────────────────────────
+
+tech TELEGRAPH_NETWORK {
+	name = "TECH_TELEGRAPH_NAME"
+	desc = "TECH_TELEGRAPH_DESC"
+	category = COMMUNICATIONS
+	era = INDUSTRIAL_ERA_1
+	base_cost = 400.0
+	start_tech = yes
+
+	effect {
+		communication_efficiency = 0.20
+		bureaucracy_efficiency = 0.10
+		revolt_risk = -0.05
+	}
+
+	unlocks {
+		UNDERSEA_TELEGRAPH_CABLE
+	}
+}
+
+tech UNDERSEA_TELEGRAPH_CABLE {
+	name = "TECH_UNDERSEA_CABLE_NAME"
+	desc = "TECH_UNDERSEA_CABLE_DESC"
+	category = COMMUNICATIONS
+	era = INDUSTRIAL_ERA_2
+	base_cost = 900.0
+	prerequisites = [ TELEGRAPH_NETWORK ]
+
+	effect {
+		international_trade = 0.15
+		diplomatic_relations = 0.10
+		intelligence_gathering = 0.10
+	}
+}
+
+tech NATIONAL_POST_SERVICE {
+	name = "TECH_POSTAL_SERVICE_NAME"
+	desc = "TECH_POSTAL_SERVICE_DESC"
+	category = COMMUNICATIONS
+	era = INDUSTRIAL_ERA_1
+	base_cost = 300.0
+
+	effect {
+		literacy_rate = 0.01
+		bureaucracy_efficiency = 0.10
+		national_unity = 0.05
+	}
+}
+
+# ─── Economy and Commerce ───────────────────────────────────────────────────
+
+tech MODERN_BANKING_SYSTEM {
+	name = "TECH_MODERN_BANKING_NAME"
+	desc = "TECH_MODERN_BANKING_DESC"
+	category = ECONOMY
+	era = INDUSTRIAL_ERA_1
+	base_cost = 500.0
+	start_tech = yes
+
+	effect {
+		credit_availability = 0.15
+		private_investment = 0.10
+		inflation_control = 0.10
+	}
+
+	unlocks {
+		STOCK_EXCHANGE
+		NATIONAL_BANK
+	}
+}
+
+tech STOCK_EXCHANGE {
+	name = "TECH_STOCK_EXCHANGE_NAME"
+	desc = "TECH_STOCK_EXCHANGE_DESC"
+	category = ECONOMY
+	era = INDUSTRIAL_ERA_2
+	base_cost = 700.0
+	prerequisites = [ MODERN_BANKING_SYSTEM ]
+
+	effect {
+		private_investment = 0.20
+		foreign_investment = 0.15
+		economic_cycles = 0.10    # Vulnerabilidad a ciclos económicos
+	}
+}
+
+tech NATIONAL_BANK {
+	name = "TECH_NATIONAL_BANK_NAME"
+	desc = "TECH_NATIONAL_BANK_DESC"
+	category = ECONOMY
+	era = INDUSTRIAL_ERA_2
+	base_cost = 750.0
+	prerequisites = [ MODERN_BANKING_SYSTEM ]
+
+	effect {
+		inflation_control = 0.20
+		currency_stability = 0.15
+		state_revenue = 0.10
+	}
+}
+
+# ─── Public Administration ──────────────────────────────────────────────────
+
+tech MODERN_BUREAUCRACY {
+	name = "TECH_MODERN_BUREAUCRACY_NAME"
+	desc = "TECH_MODERN_BUREAUCRACY_DESC"
+	category = ADMINISTRATION
+	era = INDUSTRIAL_ERA_1
+	base_cost = 350.0
+	start_tech = yes
+
+	effect {
+		tax_efficiency = 0.15
+		administration_cost = -0.10
+		corruption = -0.05
+	}
+
+	unlocks {
+		STATISTICAL_OFFICE
+	}
+}
+
+tech STATISTICAL_OFFICE {
+	name = "TECH_STATISTICAL_OFFICE_NAME"
+	desc = "TECH_STATISTICAL_OFFICE_DESC"
+	category = ADMINISTRATION
+	era = INDUSTRIAL_ERA_2
+	base_cost = 500.0
+	prerequisites = [ MODERN_BUREAUCRACY ]
+
+	effect {
+		census_accuracy = 0.25
+		tax_efficiency = 0.10
+		manpower_estimation = 0.15
+	}
+}
+
+tech PROFESSIONAL_DIPLOMATIC_CORPS {
+	name = "TECH_DIPLOMATIC_CORPS_NAME"
+	desc = "TECH_DIPLOMATIC_CORPS_DESC"
+	category = ADMINISTRATION
+	era = INDUSTRIAL_ERA_1
+	base_cost = 400.0
+
+	effect {
+		diplomatic_relations = 0.15
+		treaty_negotiation_speed = 0.10
+		international_prestige = 0.05
+	}
+}
+
+# ─── Education and Culture ──────────────────────────────────────────────────
+
+tech COMPULSORY_PRIMARY_EDUCATION {
+	name = "TECH_COMPULSORY_EDUCATION_NAME"
+	desc = "TECH_COMPULSORY_EDUCATION_DESC"
+	category = EDUCATION
+	era = INDUSTRIAL_ERA_1
+	base_cost = 550.0
+
+	effect {
+		literacy_rate = 0.03
+		research_speed = 0.10
+		qualification_growth = 0.08
+	}
+
+	unlocks {
+		NORMAL_SCHOOLS
+	}
+}
+
+tech NORMAL_SCHOOLS {
+	name = "TECH_NORMAL_SCHOOLS_NAME"
+	desc = "TECH_NORMAL_SCHOOLS_DESC"
+	category = EDUCATION
+	era = INDUSTRIAL_ERA_2
+	base_cost = 650.0
+	prerequisites = [ COMPULSORY_PRIMARY_EDUCATION ]
+
+	effect {
+		teacher_training = 0.15
+		literacy_rate = 0.02
+		education_quality = 0.10
+	}
+
+	unlocks {
+		UNIVERSITY_EXPANSION
+	}
+}
+
+tech UNIVERSITY_EXPANSION {
+	name = "TECH_UNIVERSITY_EXPANSION_NAME"
+	desc = "TECH_UNIVERSITY_EXPANSION_DESC"
+	category = EDUCATION
+	era = INDUSTRIAL_ERA_2
+	base_cost = 800.0
+	prerequisites = [ NORMAL_SCHOOLS ]
+
+	effect {
+		research_speed = 0.20
+		engineer_output = 0.15
+		prestige = 5.0
+	}
+}
+
+# ─── Public Health ──────────────────────────────────────────────────────────
+
+tech MODERN_HOSPITALS {
+	name = "TECH_HOSPITALS_NAME"
+	desc = "TECH_HOSPITALS_DESC"
+	category = PUBLIC_HEALTH
+	era = INDUSTRIAL_ERA_1
+	base_cost = 350.0
+
+	effect {
+		population_growth = 0.05
+		mortality_rate = -0.10
+		manpower_quality = 0.03
+	}
+
+	unlocks {
+		SANITATION_SYSTEMS
+	}
+}
+
+tech SANITATION_SYSTEMS {
+	name = "TECH_SANITATION_NAME"
+	desc = "TECH_SANITATION_DESC"
+	category = PUBLIC_HEALTH
+	era = INDUSTRIAL_ERA_2
+	base_cost = 600.0
+	prerequisites = [ MODERN_HOSPITALS ]
+
+	effect {
+		population_growth = 0.08
+		mortality_rate = -0.15
+		urban_attractiveness = 0.05
+		epidemic_resistance = 0.20
+	}
+}

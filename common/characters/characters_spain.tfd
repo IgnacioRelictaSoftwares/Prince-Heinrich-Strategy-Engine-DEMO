@@ -13,13 +13,20 @@ character Carlos_I_SPAIN {
 	]
 	death = 21.9.1558
 	leader = [SPA, SIRG, GER, ITA, NAP]
-	title = [SPA_SCI_CER_KING, SIRG_EMPEROR, GER_KING, ITA_KING, DUX_BORG, NAP_KING ]
-	principal_title = {SPA_SCI_CER_KING}
+	title = SPA_SCI_CER_KING
+	title = SIRG_EMPEROR
+	title = GER_KING
+	title = ITA_KING
+	title = DUX_BORG
+	title = NAP_KING
+	principal_title = SPA_SCI_CER_KING
 	trait = trait_name_1
 	trait = trait_name_2
-	traits = { trait_name_1 trait_name_2}
-	traits = [ trait_name_1, trait_name_2 ]
-	marcial = 10
+	trait = trait_name_3
+	trait = trait_name_4
+	trait = trait_name_5
+	trait = trait_name_6
+	martial = 10
 	diplomacy = 4
 	intrigue = 3
 	intelligence = 5
@@ -32,7 +39,7 @@ character Carlos_I_SPAIN {
 	}
 	1.1.1518 = {
 		graduated_from = oxford_university
-		gaduates_like = medic
+		graduates_like = medic
 	}
 	
 }

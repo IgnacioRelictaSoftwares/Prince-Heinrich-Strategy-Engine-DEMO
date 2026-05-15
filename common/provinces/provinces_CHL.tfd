@@ -15,7 +15,10 @@ province General_Lagos {
 		BORATES      { reserves = 2100000.0 }
     ]
 	
-	state = { 1 }
+	
+	
+	
+
 
     # Variables de juego — definidas en variable_def province_vars
     manpower    = 2000.0
@@ -48,9 +51,14 @@ province Arica {
 		DIATOMEAS    { reserves = 3500000.0 }
 	]
 	
+	buildings = { PORT_I }
+	building_slots = 12
 	manpower = 5000.0
 	development = 3
 	population = 75000
+	
+	
+	
 	
 	history {
 		20.10.1883 = {
@@ -79,6 +87,8 @@ province PUTRE {
 	development = 2
 	population = 16000
 	
+	state = { 1 }
+	
 	history {
 		20.10.1883 = {
 			controller = CHL
@@ -99,6 +109,8 @@ province CAMARONES {
 		SULFUR_ORE { reserves = 4200000.0 }
 	]
 	
+	
+	state = { 1 }
 	color = { 252 60 80 }
 	
 	history {
@@ -117,10 +129,11 @@ province HUARA {
 	is_coastal = true
 	terrain =coastal_hills
 	 resources = [
-        NITRATE_ORE  { reserves = 115000000.0 }
+        SALTPETER  { reserves = 115000000.0 }
         IODINE       { reserves = 210000.0 }
     ]
 	
+	state = { STATE_2 }
 	
 	color = { 213 249 246 }
 }
@@ -132,6 +145,8 @@ province CAMIGNA {
 	is_sea = false
 	terrain = desertic
 	color = { 83 227 142 }
+	
+	
 	
 	resources = [
         SILVER_ORE   { reserves = 150.0 }
@@ -146,6 +161,8 @@ province COLCHANE {
 	
 	color = { 93 95 188 }
 	
+	
+	
 	resources = [
         SULFUR_ORE   { reserves = 6200000.0 }
         BORATES      { reserves = 1500000.0 }
@@ -157,6 +174,8 @@ province IQUIQUE {
 	id = 19
 	
 	color = { 135 72 170 }
+	
+	
 	
 	resources = [
 		GUANO { reserves = 250000.0 }
@@ -173,6 +192,8 @@ province A_HOSPICIO {
 	
 	color = { 172 89 159 }
 	
+	
+	
 	resources = [
         SILVER_ORE   { reserves = 2800.0 }    #Minas de Huantajaya
         SALT_ORE     { reserves = 15000000.0 } #Salar Grande
@@ -187,18 +208,22 @@ province POZO_ALMONTE {
 	
 	color = { 135 72 56 }
 	
+	
+	
 	terrain = desert
     resources = [
-        NITRATE_ORE  { reserves = 250000000.0 } #El depósito más grande del mundo
+        SALTPETER  { reserves = 250000000.0 } #El depósito más grande del mundo
         IODINE       { reserves = 450000.0 }
     ]
 }
 province PICA {
     id = 22
     terrain = mountain
+	
+	state = { 2 }
     resources = [
         BORATES      { reserves = 4800000.0 } #Salar de Huasco
-        NITRATE_ORE  { reserves = 45000000.0 }
+        SALTPETER  { reserves = 45000000.0 }
         SILVER_ORE   { reserves = 320.0 }
     ]
 }
@@ -206,6 +231,8 @@ province PICA {
 province TOCOPILLA {
     name = "PROVINCE_TOCOPILLA"
     desc = "PROVINCE_TOCOPILLA_DESC"
+	
+	state = { 3 }
     id = 23
     color = { 210 164 147 }
     terrain = coastal_hills
@@ -223,7 +250,7 @@ province MARIA_ELENA {
     color = { 62 140 154 }
     terrain = desert
     resources = [
-        NITRATE_ORE  { reserves = 180000000.0 } #Cantones de El Toco
+        SALTPETER  { reserves = 180000000.0 } #Cantones de El Toco
         IODINE       { reserves = 320000.0 }    #Subproducto masivo del caliche
     ]
 }
@@ -274,7 +301,7 @@ province MEJILLONES {
     is_coastal = true
     resources = [
         GUANO_ORE    { reserves = 450000.0 }   #Grandes depósitos en la península
-        NITRATE_ORE  { reserves = 15000000.0 } #Cantón de Mejillones
+        SALTPETER  { reserves = 15000000.0 } #Cantón de Mejillones
     ]
 }
 
@@ -286,25 +313,11 @@ province SERRA_GORDA {
     terrain = desert
     resources = [
         SILVER_ORE   { reserves = 4500.0 }     #Distrito de Caracoles (clave en 1886)
-        NITRATE_ORE  { reserves = 90000000.0 } #Cantón Central
+        SALTPETER  { reserves = 90000000.0 } #Cantón Central
 		COPPER_ORE { reserves = 62000000.0 }
 		GOLD_ORE { reserves = 1100.0 }
 		MOLYBDENUM { reserves = 1100000.0 }
     ]
-}
-
-province SP_ATACAMA {
-	name = "PROVINCE_SP_ATACAMA"
-	desc = "PROVINCE_SP_ATACAMA_DESC"
-    id = 29
-    color = { 200 220 58 }
-    terrain = mountain_valley
-    resources = [
-        LITHIUM      { reserves = 9200000.0 }  #Reserva global total
-        POTASSIUM    { reserves = 40000000.0 } #Reserva global total
-        BORATES      { reserves = 6500000.0 } 
-    ]
-
 }
 
 province ANTOFAGASTA {
@@ -328,7 +341,7 @@ province TALTAL {
     terrain = coastal_hills
     is_coastal = true
     resources = [
-        NITRATE_ORE  { reserves = 65000000.0 } #Cantón de Taltal
+        SALTPETER  { reserves = 65000000.0 } #Cantón de Taltal
         COPPER_ORE   { reserves = 12000000.0 } #Distrito de Paposo
 		IRON_ORE { reserves = 250000000.0 } #Inicio del Cinturon Ferrifero
     ]
@@ -616,4 +629,648 @@ province SALAMANCA {
         GOLD_ORE      { reserves = 800.0 }
         SILVER_ORE    { reserves = 12000.0 }
     ]
+}
+# Región de Valparaíso
+province LA_LIGUA {
+    name = "PROVINCE_LA_LIGUA"
+    desc = "PROVINCE_LA_LIGUA_DESC"
+    id = 56
+    color = { 202 208 196 }
+    terrain = coastal_hills
+    is_coastal = true
+    resources =[
+        COPPER_ORE { reserves = 1500000.0 }
+        GOLD_ORE   { reserves = 250.0 }
+    ]
+}
+
+province PETORCA {
+    name = "PROVINCE_PETORCA"
+    desc = "PROVINCE_PETORCA_DESC"
+    id = 57
+    color = { 200 163 45 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        GOLD_ORE   { reserves = 450.0 }     # Vetas históricas ricas en oro
+        COPPER_ORE { reserves = 800000.0 }
+    ]
+}
+
+province CABILDO {
+    name = "PROVINCE_CABILDO"
+    desc = "PROVINCE_CABILDO_DESC"
+    id = 58
+    color = { 225 159 142 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 3500000.0 } # Distrito Cerro Negro y asociadas
+        SILVER_ORE { reserves = 1500.0 }
+    ]
+}
+
+province PUTAENDO {
+    name = "PROVINCE_PUTAENDO"
+    desc = "PROVINCE_PUTAENDO_DESC"
+    id = 59
+    color = { 71 123 252 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 5500000.0 } # Mega proyecto Greenfield Vizcachitas (10.8 billones de libras CuEq)
+        MOLYBDENUM { reserves = 125000.0 }  # Subproducto crítico en Vizcachitas
+        SILVER_ORE { reserves = 1000.0 }
+    ]
+}
+
+province PAPUDO {
+    name = "PROVINCE_PAPUDO"
+    desc = "PROVINCE_PAPUDO_DESC"
+    id = 60
+    color = { 139 112 185 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        COPPER_ORE { reserves = 150000.0 }
+    ]
+}
+
+province ZAPALLAR {
+    name = "PROVINCE_ZAPALLAR"
+    desc = "PROVINCE_ZAPALLAR_DESC"
+    id = 61
+    color = { 159 48 125 }
+    terrain = coastal_hills
+    is_coastal = true
+    resources =[
+        GOLD_ORE { reserves = 25.0 }
+    ]
+}
+
+province PUCHUNCAVI {
+    name = "PROVINCE_PUCHUNCAVI"
+    desc = "PROVINCE_PUCHUNCAVI_DESC"
+    id = 62
+    color = { 161 149 112 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        COPPER_ORE  { reserves = 500000.0 }
+        SILICA_SAND { reserves = 15000000.0 }
+    ]
+}
+
+province NOGALES {
+    name = "PROVINCE_NOGALES"
+    desc = "PROVINCE_NOGALES_DESC"
+    id = 63
+    color = { 147 219 146 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 2500000.0 } # Histórica Mina El Soldado (explotada por Anglo American)
+        SILVER_ORE { reserves = 2500.0 }
+    ]
+}
+
+province QUILLOTA {
+    name = "PROVINCE_QUILLOTA"
+    desc = "PROVINCE_QUILLOTA_DESC"
+    id = 64
+    color = { 94 185 146 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        GOLD_ORE   { reserves = 120.0 }
+        COPPER_ORE { reserves = 600000.0 }
+    ]
+}
+
+province CALERA_HIJUELAS {
+    name = "PROVINCE_CALERA"
+    desc = "PROVINCE_CALERA_DESC"
+    id = 65
+    color = { 145 167 209 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        LIMESTONE  { reserves = 350000000.0 } # Base de la gigantesca y centenaria industria de Cemento Melón
+        COPPER_ORE { reserves = 150000.0 }
+    ]
+}
+
+province CATEMU {
+    name = "PROVINCE_CATEMU"
+    desc = "PROVINCE_CATEMU_DESC"
+    id = 66
+    color = { 194 168 174 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 2000000.0 } # Mantos de Catemu y Mina Amalia
+        SILVER_ORE { reserves = 800.0 }
+    ]
+}
+
+province SAN_FELIPE {
+    name = "PROVINCE_SAN_FELIPE"
+    desc = "PROVINCE_SAN_FELIPE_DESC"
+    id = 67
+    color = { 212 153 85 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 1200000.0 }
+    ]
+}
+
+province SAN_ESTEBAN {
+    name = "PROVINCE_SAN_ESTEBAN"
+    desc = "PROVINCE_SAN_ESTEBAN_DESC"
+    id = 68
+    color = { 82 207 228 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 2500000.0 }
+    ]
+}
+
+province LOS_ANDES {
+    name = "PROVINCE_LOS_ANDES"
+    desc = "PROVINCE_LOS_ANDES_DESC"
+    id = 69
+    color = { 85 249 205 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 47100000.0 } # División Andina de Codelco (Río Blanco - Sur Sur), pórfido gigante de clase mundial
+        MOLYBDENUM { reserves = 1500000.0 }
+        SILVER_ORE { reserves = 15000.0 }
+    ]
+}
+
+province CALLE_LARGA {
+    name = "PROVINCE_CALLE_LARGA"
+    desc = "PROVINCE_CALLE_LARGA_DESC"
+    id = 70
+    color = { 248 86 80 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 8000000.0 } # Extensión geológica del distrito Los Andes / Los Bronces
+    ]
+}
+
+province RINCONADA {
+    name = "PROVINCE_RINCONADA"
+    desc = "PROVINCE_RINCONADA_DESC"
+    id = 71
+    color = { 200 77 120 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources = [
+        GOLD_ORE { reserves = 80.0 }
+    ]
+}
+
+province LLAILLAY {
+    name = "PROVINCE_LLAILLAY"
+    desc = "PROVINCE_LLAILLAY_DESC"
+    id = 72
+    color = { 123 57 52 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 900000.0 }
+        LIMESTONE  { reserves = 45000000.0 }
+    ]
+}
+
+province OLMUE {
+    name = "PROVINCE_OLMUE"
+    desc = "PROVINCE_OLMUE_DESC"
+    id = 73
+    color = { 85 80 100 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        QUARTZ   { reserves = 5000000.0 }
+        GOLD_ORE { reserves = 40.0 }
+    ]
+}
+
+province LIMACHE {
+    name = "PROVINCE_LIMACHE"
+    desc = "PROVINCE_LIMACHE_DESC"
+    id = 74
+    color = { 246 208 141 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources = [
+        GOLD_ORE { reserves = 50.0 }
+    ]
+}
+
+province VILLA_ALEMANA {
+    name = "PROVINCE_VILLA_ALEMANA"
+    desc = "PROVINCE_VILLA_ALEMANA_DESC"
+    id = 75
+    color = { 198 207 105 }
+    terrain = coastal_hills
+    is_coastal = false
+    resources =[
+        GOLD_ORE { reserves = 20.0 }
+    ]
+}
+
+province QUILPUE {
+    name = "PROVINCE_QUILPUE"
+    desc = "PROVINCE_QUILPUE_DESC"
+    id = 76
+    color = { 228 190 53 }
+    terrain = coastal_hills
+    is_coastal = false
+    resources =[
+        GOLD_ORE { reserves = 350.0 } # Placeres y lavaderos históricos de oro del estero Marga Marga
+    ]
+}
+
+province CONCON {
+    name = "PROVINCE_CONCON"
+    desc = "PROVINCE_CONCON_DESC"
+    id = 77
+    color = { 128 108 177 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        SILICA_SAND { reserves = 25000000.0 } # Grandes acumulaciones silíceas (Campo Dunar)
+    ]
+}
+
+province VINA_DEL_MAR {
+    name = "PROVINCE_VINA_DEL_MAR"
+    desc = "PROVINCE_VINA_DEL_MAR_DESC"
+    id = 78
+    color = { 156 252 86 }
+    terrain = coastal_hills
+    is_coastal = true
+    resources =[
+        GOLD_ORE { reserves = 45.0 }
+    ]
+}
+
+province VALPARAISO {
+    name = "PROVINCE_VALPARAISO"
+    desc = "PROVINCE_VALPARAISO_DESC"
+    id = 79
+    color = { 72 208 128 }
+    terrain = coastal_hills
+    is_coastal = true
+    resources =[
+        GRANITE { reserves = 80000000.0 } # Canteras y batolito costero base para infraestructuras
+    ]
+}
+
+province CASABLANCA {
+    name = "PROVINCE_CASABLANCA"
+    desc = "PROVINCE_CASABLANCA_DESC"
+    id = 80
+    color = { 49 175 97 }
+    terrain = mountain_valley
+    is_coastal = true
+    resources =[
+        QUARTZ   { reserves = 12000000.0 }
+        GOLD_ORE { reserves = 60.0 }
+    ]
+}
+
+province ALGARROBO {
+    name = "PROVINCE_ALGARROBO"
+    desc = "PROVINCE_ALGARROBO_DESC"
+    id = 81
+    color = { 52 50 99 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        SILICA_SAND { reserves = 5000000.0 }
+    ]
+}
+
+province EL_QUISCO {
+    name = "PROVINCE_EL_QUISCO"
+    desc = "PROVINCE_EL_QUISCO_DESC"
+    id = 82
+    color = { 45 138 106 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        GRANITE { reserves = 15000000.0 }
+    ]
+}
+
+province EL_TABO {
+    name = "PROVINCE_EL_TABO"
+    desc = "PROVINCE_EL_TABO_DESC"
+    id = 83
+    color = { 225 63 240 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources = [
+        SILICA_SAND { reserves = 8000000.0 }
+    ]
+}
+
+province CARTAGENA {
+    name = "PROVINCE_CARTAGENA"
+    desc = "PROVINCE_CARTAGENA_DESC"
+    id = 84
+    color = { 60 118 141 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        CLAY { reserves = 10000000.0 }
+    ]
+}
+
+province SAN_ANTONIO {
+    name = "PROVINCE_SAN_ANTONIO"
+    desc = "PROVINCE_SAN_ANTONIO_DESC"
+    id = 85
+    color = { 217 178 186 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        SILICA_SAND { reserves = 25000000.0 } # Arenas de Llolleo y depósitos litorales
+    ]
+}
+
+province SANTO_DOMINGO {
+    name = "PROVINCE_SANTO_DOMINGO"
+    desc = "PROVINCE_SANTO_DOMINGO_DESC"
+    id = 86
+    color = { 74 91 234 }
+    terrain = coastal_flat
+    is_coastal = true
+    resources =[
+        GOLD_ORE { reserves = 15.0 } 
+        IRON_ORE { reserves = 120000.0 } # Concentraciones de arenas ferríferas cerca de la boca del Río Maipo
+    ]
+}
+# Región Metropolitana (Consolidada por Distritos Estratégicos)
+
+province TILTIL {
+    name = "PROVINCE_TILTIL"
+    desc = "PROVINCE_TILTIL_DESC"
+    id = 87
+    color = { 137 113 170 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        LIMESTONE  { reserves = 350000000.0 } # Depósitos masivos (futura base de Cemento Polpaico)
+        COPPER_ORE { reserves = 3500000.0 }   # Distrito minero histórico de Tiltil
+        GOLD_ORE   { reserves = 25.0 }
+    ]
+}
+
+province COLINA {
+    name = "PROVINCE_COLINA"
+    desc = "PROVINCE_COLINA_DESC"
+    id = 88
+    color = { 159 212 82 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 2800000.0 }   # Yacimientos menores y extensión de pórfidos
+        STONE_AGGREGATES { reserves = 50000000.0 } # Canteras basálticas clave para infraestructura
+    ]
+}
+
+province LO_BARNECHEA {
+    name = "PROVINCE_LO_BARNECHEA"
+    desc = "PROVINCE_LO_BARNECHEA_DESC"
+    id = 89
+    color = { 56 208 165 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 135000000.0 } # MEGA-YACIMIENTO LOS BRONCES (Gigante mundial Anglo American Sur)
+        MOLYBDENUM { reserves = 2200000.0 }   # Subproducto crítico de gran valor
+        SILVER_ORE { reserves = 8500.0 }      # Plata contenida en el pórfido
+    ]
+}
+
+province SAN_JOSE_DE_MAIPO {
+    name = "PROVINCE_SJ_MAIPO"
+    desc = "PROVINCE_SJ_MAIPO_DESC"
+    id = 90
+    color = { 237 67 201 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        GYPSUM     { reserves = 85000000.0 }  # Masivo depósito de Yeso en El Volcán / Lo Valdés
+        SILVER_ORE { reserves = 4500.0 }      # Histórica Mina de Plata San Pedro Nolasco
+        COPPER_ORE { reserves = 9500000.0 }
+    ]
+}
+
+province PIRQUE {
+    name = "PROVINCE_PIRQUE"
+    desc = "PROVINCE_PIRQUE_DESC"
+    id = 91
+    color = { 176 120 242 }
+    terrain = hills
+    is_coastal = false
+    resources =[
+        CLAY       { reserves = 15000000.0 }
+        COPPER_ORE { reserves = 120000.0 }
+    ]
+}
+
+province PAINE {
+    name = "PROVINCE_PAINE"
+    desc = "PROVINCE_PAINE_DESC"
+    id = 92
+    color = { 183 206 121 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        GOLD_ORE   { reserves = 40.0 }        # Distrito histórico de Aculeo
+        COPPER_ORE { reserves = 800000.0 }
+    ]
+}
+
+province ALHUE {
+    name = "PROVINCE_ALHUE"
+    desc = "PROVINCE_ALHUE_DESC"
+    id = 93
+    color = { 97 233 87 }
+    terrain = mountain
+    is_coastal = false
+    resources =[
+        GOLD_ORE   { reserves = 250.0 }       # Minera Florida: Rica veta epitermal de oro de alta ley
+        SILVER_ORE { reserves = 2200.0 }
+        ZINC_ORE   { reserves = 1500000.0 }
+    ]
+}
+
+province SAN_PEDRO {
+    name = "PROVINCE_SAN_PEDRO"
+    desc = "PROVINCE_SAN_PEDRO_DESC"
+    id = 94
+    color = { 116 185 216 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        SILICA_SAND { reserves = 8000000.0 }
+        CLAY        { reserves = 12000000.0 }
+    ]
+}
+
+province MELIPILLA {
+    name = "PROVINCE_MELIPILLA"
+    desc = "PROVINCE_MELIPILLA_DESC"
+    id = 95
+    color = { 87 124 207 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        CLAY       { reserves = 25000000.0 }  # Tierras arcillosas y agrícolas profundas
+        GOLD_ORE   { reserves = 15.0 }        # Antiguos lavaderos menores
+    ]
+}
+
+province MARIA_PINTO {
+    name = "PROVINCE_MARIA_PINTO"
+    desc = "PROVINCE_MARIA_PINTO_DESC"
+    id = 96
+    color = { 246 214 168 }
+    terrain = hills
+    is_coastal = false
+    resources =[
+        QUARTZ { reserves = 3500000.0 }
+    ]
+}
+
+province CURACAVI {
+    name = "PROVINCE_CURACAVI"
+    desc = "PROVINCE_CURACAVI_DESC"
+    id = 97
+    color = { 177 151 54 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        GOLD_ORE { reserves = 55.0 }          # Históricos lavaderos del Estero Puangue
+    ]
+}
+
+province LAMPA {
+    name = "PROVINCE_LAMPA"
+    desc = "PROVINCE_LAMPA_DESC"
+    id = 98
+    color = { 223 213 48 }
+    terrain = mountain_valley
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 4500000.0 }   # Vetillas de Lampa y Batuco
+        GOLD_ORE   { reserves = 65.0 }
+    ]
+}
+
+province MAIPU_PUDAHUEL {
+    name = "PROVINCE_MAIPU_PUDAHUEL"
+    desc = "PROVINCE_MAIPU_PUDAHUEL_DESC"
+    id = 99
+    color = { 231 134 195 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        COPPER_ORE { reserves = 8500000.0 }   # Distrito Lo Aguirre y Mina La Africana (muy importantes en s.XX)
+        CLAY       { reserves = 15000000.0 }
+    ]
+}
+
+province PENAFLOR_CT {
+    name = "PROVINCE_PENAFLOR_CT"
+    desc = "PROVINCE_PENAFLOR_CT_DESC"
+    id = 100
+    color = { 216 60 65 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        CLAY { reserves = 10000000.0 }
+    ]
+}
+
+province TALAGANTE_ISLA {
+    name = "PROVINCE_TALAGANTE_ISLA"
+    desc = "PROVINCE_TALAGANTE_ISLA_DESC"
+    id = 101
+    color = { 51 201 239 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        GRAVEL { reserves = 25000000.0 }      # Áridos del Río Maipo
+        CLAY   { reserves = 12000000.0 }
+    ]
+}
+
+province SAN_BERNARDO_BUIN {
+    name = "PROVINCE_SBERNARDO_BUIN"
+    desc = "PROVINCE_SBERNARDO_BUIN_DESC"
+    id = 102
+    color = { 47 252 226 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        GRAVEL { reserves = 80000000.0 }      # Gran extracción de áridos vitales para el ferrocarril al sur
+    ]
+}
+
+province SANTIAGO_SUR_ORIENTE {
+    name = "PROVINCE_STGO_SUR_ORIENTE"
+    desc = "PROVINCE_STGO_SUR_ORIENTE_DESC"
+    id = 103
+    color = { 51 231 161 }
+    terrain = plains
+    is_coastal = false
+    resources =[
+        CLAY   { reserves = 8000000.0 }
+        GRAVEL { reserves = 15000000.0 }
+    ]
+}
+
+province SANTIAGO_NOR_ORIENTE {
+    name = "PROVINCE_STGO_NOR_ORIENTE"
+    desc = "PROVINCE_STGO_NOR_ORIENTE_DESC"
+    id = 104
+    color = { 190 91 136 }
+    terrain = hills
+    is_coastal = false
+    resources =[
+        LEAD_ORE   { reserves = 250000.0 }    # Antigua Mina Las Condes / Apoquindo
+        SILVER_ORE { reserves = 450.0 }
+        COPPER_ORE { reserves = 120000.0 }
+    ]
+}
+
+province SANTIAGO_CENTRO {
+    name = "PROVINCE_SANTIAGO_CENTRO"
+    desc = "PROVINCE_SANTIAGO_CENTRO_DESC"
+    id = 105
+    color = { 248 123 209 }
+    terrain = plains
+    is_coastal = false
+    
+    # Recursos extraíbles subyacentes mínimos (urbanizado)
+    resources =[
+        CLAY { reserves = 5000000.0 }         # Históricas fábricas de ladrillos en Renca/Quinta Normal
+    ]
+
+    # Variables de centro de poder para la simulación económica de Balmaceda (1886)
+    state       = { 13 }
+    manpower    = 25000.0
+    development = 10                          # Nivel máximo de infraestructura inicial en el país
+    population  = 195000                      # Población censo ~1885-1886 concentrada
 }

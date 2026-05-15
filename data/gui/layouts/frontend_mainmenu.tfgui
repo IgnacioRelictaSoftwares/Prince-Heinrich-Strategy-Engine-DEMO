@@ -6,7 +6,7 @@
 guilayout FRONTEND_MAINMENU {
 
     # ── Fondo completo ────────────────────────────────────────────────────
-    sp_background {
+    scenario_background {
         clipping    = false
     }
 

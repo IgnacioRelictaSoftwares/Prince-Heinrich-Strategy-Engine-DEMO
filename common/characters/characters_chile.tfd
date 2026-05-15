@@ -1,0 +1,309 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  characters/characters_chile.tfd — Relicta History Engine
+#  Personajes históricos de Chile, era de la República Liberal (1886)
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Jefe de Estado ──────────────────────────────────────────────────────────
+character JOSE_MANUEL_BALMACEDA {
+	name = "JOSE_MANUEL_BALMACEDA_NAME"
+	desc = "JOSE_MANUEL_BALMACEDA_DESC"
+	birthdate = 19.7.1840
+	spouse = EMILIA_DE_TORO
+	children = [
+		PEDRO_BALMACEDA { birthdate = 22.12.1862 }
+	]
+	death = 19.9.1891
+	leader = [ CHL ]
+	principal_title = PRESIDENTE_DE_CHILE
+	trait = ambitious_reformer
+	trait = orator_eloquent
+	trait = centralist
+	martial = 3
+	diplomacy = 8
+	intrigue = 5
+	intelligence = 7
+	stewardship = 9
+	statesman = 10
+	popularity = 72.0
+	ideology = LIBERAL_REFORMISTA
+
+	18.9.1886 = {
+		assumes_office = CHL
+		government = PRESIDENTIALISM_PORTALINO
+	}
+}
+
+# ── Ministros y Gabinete ────────────────────────────────────────────────────
+character ENRIQUE_SALVADOR_SANFUENTES {
+	name = "ENRIQUE_SANFUENTES_NAME"
+	desc = "ENRIQUE_SANFUENTES_DESC"
+	birthdate = 27.6.1849
+	death = 21.7.1924
+	leader = [ CHL ]
+	principal_title = MINISTRO_DE_HACIENDA
+	trait = financial_genius
+	trait = incorruptible
+	martial = 1
+	diplomacy = 6
+	intrigue = 4
+	intelligence = 8
+	stewardship = 10
+	statesman = 9
+	popularity = 55.0
+	ideology = LIBERAL_MODERADO
+
+	18.9.1886 = {
+		role = finance_minister
+		country = CHL
+	}
+}
+
+character RAMON_BARROS_LUCO {
+	name = "RAMON_BARROS_LUCO_NAME"
+	desc = "RAMON_BARROS_LUCO_DESC"
+	birthdate = 9.6.1835
+	death = 20.9.1919
+	leader = [ CHL ]
+	principal_title = MINISTRO_DEL_INTERIOR
+	trait = pragmatic_diplomat
+	trait = conservative_liberal
+	martial = 1
+	diplomacy = 7
+	intrigue = 6
+	intelligence = 6
+	stewardship = 7
+	statesman = 8
+	popularity = 50.0
+	ideology = LIBERAL_CONSERVADOR
+
+	18.9.1886 = {
+		role = interior_minister
+		country = CHL
+	}
+}
+
+character DOMINGO_SANTA_MARIA {
+	name = "DOMINGO_SANTA_MARIA_NAME"
+	desc = "DOMINGO_SANTA_MARIA_DESC"
+	birthdate = 4.8.1825
+	death = 18.7.1907
+	leader = [ CHL ]
+	principal_title = EX_PRESIDENTE_DE_CHILE
+	trait = secular_reformer
+	trait = veteran_statesman
+	trait = anti_clerical
+	martial = 2
+	diplomacy = 8
+	intrigue = 8
+	intelligence = 8
+	stewardship = 7
+	statesman = 9
+	popularity = 48.0
+	ideology = LIBERAL_RADICAL
+
+	18.9.1886 = {
+		role = elder_statesman
+		country = CHL
+	}
+}
+
+# ── Militares ───────────────────────────────────────────────────────────────
+character MANUEL_BAQUEDANO {
+	name = "MANUEL_BAQUEDANO_NAME"
+	desc = "MANUEL_BAQUEDANO_DESC"
+	birthdate = 1.1.1823
+	death = 30.9.1895
+	leader = [ CHL ]
+	principal_title = GENERAL_EN_JEFE
+	trait = brilliant_strategist
+	trait = war_hero_pacific
+	trait = cautious_commander
+	martial = 9
+	diplomacy = 4
+	intrigue = 4
+	intelligence = 7
+	stewardship = 5
+	statesman = 6
+	popularity = 85.0
+	ideology = MILITAR_APOLITICO
+
+	18.9.1886 = {
+		role = army_chief
+		country = CHL
+	}
+}
+
+character ARTURO_PRAT_CHACON {
+	name = "ARTURO_PRAT_NAME"
+	desc = "ARTURO_PRAT_DESC"
+	birthdate = 3.4.1848
+	death = 21.5.1879
+	leader = [ CHL ]
+	principal_title = HEROE_NACIONAL
+	trait = national_hero
+	trait = martyr_of_duty
+	trait = naval_legend
+	martial = 8
+	diplomacy = 5
+	intrigue = 2
+	intelligence = 7
+	stewardship = 4
+	statesman = 5
+	popularity = 95.0
+	ideology = HEROE_NACIONAL
+
+	# Falleció en combate en Iquique, 1879 — es figura simbólica
+	1.1.1879 = {
+		role = naval_commander
+		country = CHL
+	}
+}
+
+character JUAN_WILLIAMS_REBOLLEDO {
+	name = "JUAN_WILLIAMS_REBOLLEDO_NAME"
+	desc = "JUAN_WILLIAMS_REBOLLEDO_DESC"
+	birthdate = 5.10.1825
+	death = 24.6.1910
+	leader = [ CHL ]
+	principal_title = COMANDANTE_DE_LA_ARMADA
+	trait = naval_organizer
+	trait = disciplined_admiral
+	martial = 8
+	diplomacy = 4
+	intrigue = 3
+	intelligence = 6
+	stewardship = 6
+	statesman = 5
+	popularity = 60.0
+	ideology = MILITAR_APOLITICO
+
+	18.9.1886 = {
+		role = navy_chief
+		country = CHL
+	}
+}
+
+character EMILIO_SOTOMAYOR {
+	name = "EMILIO_SOTOMAYOR_NAME"
+	desc = "EMILIO_SOTOMAYOR_DESC"
+	birthdate = 8.9.1826
+	death = 10.3.1894
+	leader = [ CHL ]
+	principal_title = GENERAL_DE_DIVISION
+	trait = occupation_governor
+	trait = administrator_commander
+	martial = 7
+	diplomacy = 5
+	intrigue = 5
+	intelligence = 6
+	stewardship = 7
+	statesman = 6
+	popularity = 45.0
+	ideology = MILITAR_APOLITICO
+
+	18.9.1886 = {
+		role = occupation_commander
+		country = CHL
+		stationed = Arica
+	}
+}
+
+# ── Rivales Políticos ───────────────────────────────────────────────────────
+character MANUEL_JOSE_IRARRAZAVAL {
+	name = "MANUEL_JOSE_IRARRAZAVAL_NAME"
+	desc = "MANUEL_JOSE_IRARRAZAVAL_DESC"
+	birthdate = 15.5.1834
+	death = 14.2.1896
+	leader = [ CHL ]
+	principal_title = SENADOR_CONSERVADOR
+	trait = conservative_leader
+	trait = clerical_defender
+	trait = parliamentary_orator
+	martial = 1
+	diplomacy = 7
+	intrigue = 7
+	intelligence = 7
+	stewardship = 6
+	statesman = 8
+	popularity = 42.0
+	ideology = CONSERVADOR_CLERICAL
+
+	18.9.1886 = {
+		role = opposition_leader
+		country = CHL
+	}
+}
+
+character JUAN_DE_DIOS_ALDUNATE {
+	name = "JUAN_DE_DIOS_ALDUNATE_NAME"
+	desc = "JUAN_DE_DIOS_ALDUNATE_DESC"
+	birthdate = 23.3.1832
+	death = 9.8.1903
+	leader = [ CHL ]
+	principal_title = SENADOR_NACIONAL
+	trait = nationalist_leader
+	trait = industrial_promoter
+	martial = 2
+	diplomacy = 6
+	intrigue = 5
+	intelligence = 6
+	stewardship = 8
+	statesman = 7
+	popularity = 40.0
+	ideology = NACIONALISTA
+
+	18.9.1886 = {
+		role = opposition_leader
+		country = CHL
+	}
+}
+
+# ── Diplomáticos y Comerciantes ─────────────────────────────────────────────
+character CARLOS_ANTUNEZ {
+	name = "CARLOS_ANTUNEZ_NAME"
+	desc = "CARLOS_ANTUNEZ_DESC"
+	birthdate = 12.11.1847
+	death = 5.4.1917
+	leader = [ CHL ]
+	principal_title = MINISTRO_DE_RELACIONES_EXTERIORES
+	trait = skilled_diplomat
+	trait = anglophile
+	martial = 1
+	diplomacy = 9
+	intrigue = 6
+	intelligence = 7
+	stewardship = 6
+	statesman = 7
+	popularity = 38.0
+	ideology = LIBERAL_MODERADO
+
+	18.9.1886 = {
+		role = foreign_minister
+		country = CHL
+	}
+}
+
+# ── Ingenieros y Constructores ──────────────────────────────────────────────
+character VICTOR_MANUAL_CHIAPPINI {
+	name = "VICTOR_CHIAPPINI_NAME"
+	desc = "VICTOR_CHIAPPINI_DESC"
+	birthdate = 3.2.1855
+	death = 17.11.1928
+	leader = [ CHL ]
+	principal_title = DIRECTOR_DE_OBRAS_PUBLICAS
+	trait = railroad_engineer
+	trait = infrastructure_builder
+	martial = 1
+	diplomacy = 3
+	intrigue = 2
+	intelligence = 8
+	stewardship = 9
+	statesman = 4
+	popularity = 30.0
+	ideology = TECNOCRATA
+
+	18.9.1886 = {
+		role = public_works_director
+		country = CHL
+	}
+}

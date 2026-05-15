@@ -1,0 +1,51 @@
+bookmark_country CHL {
+	name = "CHL_1886_NAME"
+	country_desc = "CHL_1886_DESC"
+	leader = "JOSE_MANUEL_BALMACEDA"
+	leader_nick = "EL_PRESIDENTE_REFORMISTA_NICK"
+
+	armies = [
+		Ejercito_del_Norte { location = Arica strength = 3500.0 type = infantry }
+		Ejercito_del_Centro { location = SANTIAGO_CENTRO strength = 5000.0 type = infantry }
+		Ejercito_del_Sur { location = CONCEPCION strength = 2500.0 type = infantry }
+	]
+
+	wars = [
+		Pacific_War_Aftermath {
+			type = cold_peace
+			vs = [ PER BOL ]
+			since = 20.10.1883
+			status = truce_negotiation
+		}
+	]
+
+	notable_figures = [
+		JOSE_MANUEL_BALMACEDA
+		ENRIQUE_SALVADOR_SANFUENTES
+		RAMON_BARROS_LUCO
+		DOMINGO_SANTA_MARIA
+		MANUEL_BAQUEDANO
+		ARTURO_PRAT_CHACON
+		JOSE_MIGUEL_CARRERA_F
+	]
+
+	navy = [
+		Blanco_Encalada { type = armored_frigate strength = 85.0 }
+		Cochrane { type = ironclad_battleship strength = 90.0 }
+		Esmeralda { type = protected_cruiser strength = 80.0 }
+		Magallanes { type = gunboat strength = 60.0 }
+		Abtao { type = corvette strength = 55.0 }
+	]
+
+	army_count = [
+		infantry = 12000
+		cavalry = 1500
+		artillery_pieces = 48
+	]
+
+	# Aliados y relaciones diplomáticas
+	allies = []
+	vassals = []
+	rivals = [ PER BOL ]
+	guarantees = []
+}

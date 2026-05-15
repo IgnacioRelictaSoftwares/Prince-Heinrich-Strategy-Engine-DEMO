@@ -2,7 +2,7 @@ country CHL {
 	name = "CHL_NAME"
 	flag = CHL
 	color = { 251 71 95 }
-	capital = ARICA_STATE
+	capital = STATE_1
 	prestige = 900.0
 	treasury = 2500000.0
 	manpower = 35000
@@ -16,7 +16,7 @@ country CHL {
 		18.9.1886 = {
 			head_of_state = JOSE_MANUEL_BALMACEDA
 			government = PRESIDENTIALISM_PORTALINO
-			religion   = CATHOLISISM
+			religion   = CATHOLICISM
 			ideology   = OLIGARCHY
 		}
 	}

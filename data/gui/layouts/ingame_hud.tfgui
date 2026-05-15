@@ -1,0 +1,102 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  data/gui/layouts/ingame_hud.tfgui
+#  HUD in-game — Relicta History Engine
+# ═══════════════════════════════════════════════════════════════════════════
+
+guilayout INGAME_HUD {
+	visible = true
+
+	# ── Barra superior (topbar) ──────────────────────────────────────────────
+	ingame_topbar {
+		type     = panel
+		anchor   = TC
+		origo    = TC
+		pos      = [ 0, 8 ]
+		size     = [ 400, 56 ]
+		visible  = true
+		clipping = false
+
+		topbar_date_label {
+			type       = label
+			anchor     = CC
+			origo      = CC
+			pos        = [ 0, 0 ]
+			size       = [ 120, 24 ]
+			text       = ""
+			font       = "default_medium"
+			text_align = center
+			color      = [ 1, 1, 0.7 ]
+			visible    = true
+		}
+
+		topbar_pause_button {
+			type        = button
+			anchor      = CC
+			origo       = CC
+			pos         = [ 130, 0 ]
+			size        = [ 60, 24 ]
+			text        = "HUD_PAUSE"
+			action      = toggle_pause
+			interactive = true
+		}
+	}
+
+	# ── Panel lateral derecho — información del país ─────────────────────────
+	ingame_country_panel {
+		type     = panel
+		anchor   = TR
+		origo    = TR
+		pos      = [ -310, 70 ]
+		size     = [ 300, 540 ]
+		visible  = true
+		clipping = false
+
+		country_header_label {
+			type       = label
+			anchor     = TL
+			origo      = TL
+			pos        = [ 10, 10 ]
+			size       = [ 280, 28 ]
+			text       = ""
+			font       = "default_large"
+			text_align = left
+			color      = [ 1, 0.9, 0.5 ]
+			visible    = true
+		}
+	}
+
+	# ── Panel inferior — alertas y notificaciones ────────────────────────────
+	ingame_alert_area {
+		type     = panel
+		anchor   = BC
+		origo    = BC
+		pos      = [ 0, -50 ]
+		size     = [ 600, 45 ]
+		visible  = true
+		clipping = false
+
+		ingame_alert_label {
+			type       = label
+			anchor     = CC
+			origo      = CC
+			pos        = [ 0, 0 ]
+			size       = [ 580, 24 ]
+			text       = ""
+			font       = "default_small"
+			text_align = center
+			color      = [ 0.9, 0.6, 0.3 ]
+			visible    = true
+		}
+	}
+
+	# ── Minimapa ─────────────────────────────────────────────────────────────
+	ingame_minimap {
+		type    = panel
+		anchor  = BR
+		origo   = BR
+		pos     = [ -10, -10 ]
+		size    = [ 220, 180 ]
+		visible = true
+		clipping = true
+	}
+}

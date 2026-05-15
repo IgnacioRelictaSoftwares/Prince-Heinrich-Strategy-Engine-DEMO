@@ -1,0 +1,80 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  cultures/cultures_south_america.tfd — Relicta History Engine
+#  Culturas de Sudamérica, con foco en el Cono Sur (1886)
+# ═══════════════════════════════════════════════════════════════════════════
+
+culture CHILEAN {
+	name = "CULTURE_CHILEAN_NAME"
+	desc = "CULTURE_CHILEAN_DESC"
+	color = { 220 50 50 }
+
+	primary_language = SPANISH
+	heritage = HISPANIC
+	cultural_traits = [ hardworking, resilient, patriotic, regionalist ]
+
+	# Provincias con mayoría chilena
+	provinces = {
+		# Chile central y sur (todas las provincias del CHL continentales)
+	}
+
+	names_male = [ JOSE MANUEL CARLOS JUAN PEDRO FRANCISCO ARTURO LUIS RAMON DOMINGO ENRIQUE VICTOR EMILIO ]
+	names_female = [ MARIA CARMEN ROSA ISABEL EMILIA JUANA LAURA ELENA MERCEDES ]
+	surnames = [ BALMACEDA PRAT BAQUEDANO BARROS SANFUENTES SANTA_MARIA ALDUNATE SOTOMAYOR ANTUNEZ CHIAPPINI ]
+}
+
+culture MAPUCHE {
+	name = "CULTURE_MAPUCHE_NAME"
+	desc = "CULTURE_MAPUCHE_DESC"
+	color = { 80 160 80 }
+
+	primary_language = MAPUDUNGUN
+	heritage = INDIGENOUS_ANDINA
+	cultural_traits = [ warrior_tradition, communal_land, resistant, spiritual ]
+
+	provinces = {
+		# Araucanía — territorio mapuche autónomo hasta 1883
+	}
+
+	names_male = [ LAUTARO CAUPOLICAN COLOCOLO QUILAPAN LEFTRARU PELLAHUEN ]
+	names_female = [ FRESIA GUACOLDA RAYEN MILLARAY ]
+	surnames = [ ANTIMIL MARIMAN LINCOQUEO PAINEMIL HUENCHUL ]
+}
+
+culture AYMARA {
+	name = "CULTURE_AYMARA_NAME"
+	desc = "CULTURE_AYMARA_DESC"
+	color = { 180 120 50 }
+
+	primary_language = AYMARA
+	heritage = INDIGENOUS_ANDINA
+	cultural_traits = [ highlander, agrarian, communal, traditional ]
+
+	provinces = {
+		# Tarapacá, Arica, altiplano
+	}
+
+	names_male = [ TUPAC WILLKA MALLKU JACHA INTI YATIRI ]
+	names_female = [ PACHA PHATI SUMANI WARA WAYRA ]
+	surnames = [ MAMANI QUISPE CONDORI CHOQUE HUANCA ]
+}
+
+culture EUROPEAN_IMMIGRANT {
+	name = "CULTURE_EUROPEAN_IMMIGRANT_NAME"
+	desc = "CULTURE_EUROPEAN_IMMIGRANT_DESC"
+	color = { 120 180 220 }
+
+	primary_language = VARIOUS
+	heritage = EUROPEAN_MIXED
+	cultural_traits = [ entrepreneurial, educated, outsider, hardworking ]
+
+	# Alemanes en Valdivia/Llanquihue, Británicos en Valparaíso, Italianos, Franceses
+	provinces = {
+		VALPARAISO
+		CONCEPCION
+		SANTIAGO_CENTRO
+	}
+
+	names_male = [ HEINRICH FRIEDRICH WILLIAM JOHN PIETRO JEAN ]
+	names_female = [ ANNA ELISABETH MARY ROSA SOPHIE ]
+	surnames = [ SCHNEIDER MULLER SMITH JONES ROSSI DUPONT ]
+}

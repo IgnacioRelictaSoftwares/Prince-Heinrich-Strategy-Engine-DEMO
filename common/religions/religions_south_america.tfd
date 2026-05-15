@@ -1,0 +1,120 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  religions/religions_south_america.tfd — Relicta History Engine
+#  Religiones presentes en Chile y Sudamérica, 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+religion CATHOLICISM {
+	name = "RELIGION_CATHOLICISM_NAME"
+	desc = "RELIGION_CATHOLICISM_DESC"
+	color = { 255 215 0 }
+
+	head_of_faith = PAPA_DE_ROMA
+	religious_head_title = PAPA
+	religious_head_tag = PAP
+
+	doctrines = [
+		apostolic_succession
+		papal_primacy
+		seven_sacraments
+		saint_veneration
+		canon_law
+	]
+
+	# Jerarquía eclesiástica con poder político
+	temporal_power = 0.25
+	moral_authority = 0.82
+
+	# Relación con el Estado chileno (1886 — tensiones por leyes laicas)
+	state_relation = CONCORDAT_PARTIAL
+
+	holy_sites = [
+		SANTIAGO_CENTRO { province = 105 importance = 7 }   # Catedral de Santiago
+	]
+
+	# Efectos sobre los fieles
+	effect {
+		birth_rate = 0.05
+		conversion_resistance = 0.30
+		church_influence = 0.25
+	}
+}
+
+religion MAPUCHE_SPIRITUALITY {
+	name = "RELIGION_MAPUCHE_NAME"
+	desc = "RELIGION_MAPUCHE_DESC"
+	color = { 60 140 60 }
+
+	head_of_faith = NONE
+	doctrines = [
+		ancestor_worship
+		animism
+		oral_tradition
+		machi_healers
+		nature_spirits
+	]
+
+	temporal_power = 0.0
+	moral_authority = 0.45
+
+	state_relation = PERSECUTED_MINORITY     # El Estado chileno promueve conversión católica
+
+	effect {
+		conversion_resistance = 0.60
+		cultural_cohesion = 0.40
+		church_influence = 0.0
+	}
+}
+
+religion AYMARA_TRADITIONAL {
+	name = "RELIGION_AYMARA_NAME"
+	desc = "RELIGION_AYMARA_DESC"
+	color = { 200 140 80 }
+
+	head_of_faith = NONE
+	doctrines = [
+		pachamama_worship
+		mountain_spirits
+		syncretic_catholic
+		communal_rituals
+	]
+
+	temporal_power = 0.0
+	moral_authority = 0.35
+
+	state_relation = SYNCRETIC_INTEGRATION    # Sincretismo con catolicismo colonial
+
+	effect {
+		conversion_resistance = 0.40
+		cultural_cohesion = 0.35
+	}
+}
+
+religion PROTESTANTISM {
+	name = "RELIGION_PROTESTANTISM_NAME"
+	desc = "RELIGION_PROTESTANTISM_DESC"
+	color = { 100 100 220 }
+
+	head_of_faith = NONE
+	doctrines = [
+		sola_scriptura
+		priesthood_of_all_believers
+		two_sacraments
+		individual_conscience
+	]
+
+	temporal_power = 0.02      # Mínimo en Chile 1886
+	moral_authority = 0.40
+
+	state_relation = TOLERATED_MINORITY
+
+	# Comunidades anglicanas y luteranas en puertos (Valparaíso principalmente)
+	holy_sites = [
+		VALPARAISO { province = 79 importance = 3 }
+	]
+
+	effect {
+		literacy_rate = 0.02      # Énfasis protestante en lectura bíblica
+		birth_rate = 0.0
+		church_influence = 0.02
+	}
+}

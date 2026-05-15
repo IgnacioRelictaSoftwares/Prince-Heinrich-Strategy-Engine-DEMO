@@ -1,9 +1,9 @@
-/*bookmark THE_END_OF_THE_SPANISH_GOLDEN_AGE {
+bookmark THE_END_OF_THE_SPANISH_GOLDEN_AGE {
 	start_date = 12.3.1640
 	
 	main_countries = [ SPA, ENG, SIRG, FRA, RUS, CHN, OTM]
-	secoundary_countries = [ VNC, TTC, CHL, VOP, NTL, VNE ]
+	secondary_countries = [ VNC, TTC, CHL, VOP, NTL, VNE ]
 	minor_countries = [ GRP, JAP ]
 	
 	scenary_desc = "THE_END_OF_THE_SPANISH_GOLDEN_AGE_DESC"
-}*/
+}

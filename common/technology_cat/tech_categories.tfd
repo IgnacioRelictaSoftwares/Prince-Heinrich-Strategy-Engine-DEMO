@@ -1,0 +1,113 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  technology_cat/tech_categories.tfd — Relicta History Engine
+#  Categorías del árbol de tecnologías para Chile 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+tech_category MINING {
+	name = "CAT_MINERIA_NAME"
+	desc = "CAT_MINERIA_DESC"
+	sprite = "GFX_tech_mining"
+	position = { x = 1 y = 0 }
+	color = { 180 120 60 }
+}
+
+tech_category NITRATE_INDUSTRY {
+	name = "CAT_SALITRE_NAME"
+	desc = "CAT_SALITRE_DESC"
+	sprite = "GFX_tech_nitrate"
+	position = { x = 2 y = 0 }
+	color = { 255 255 200 }
+}
+
+tech_category METALLURGY {
+	name = "CAT_METALURGIA_NAME"
+	desc = "CAT_METALURGIA_DESC"
+	sprite = "GFX_tech_metallurgy"
+	position = { x = 3 y = 0 }
+	color = { 200 150 80 }
+}
+
+tech_category ARMY_TECH {
+	name = "CAT_EJERCITO_NAME"
+	desc = "CAT_EJERCITO_DESC"
+	sprite = "GFX_tech_army"
+	position = { x = 0 y = 1 }
+	color = { 180 40 40 }
+}
+
+tech_category NAVAL_TECH {
+	name = "CAT_ARMADA_NAME"
+	desc = "CAT_ARMADA_DESC"
+	sprite = "GFX_tech_navy"
+	position = { x = 1 y = 1 }
+	color = { 40 80 180 }
+}
+
+tech_category INFRASTRUCTURE {
+	name = "CAT_INFRAESTRUCTURA_NAME"
+	desc = "CAT_INFRAESTRUCTURA_DESC"
+	sprite = "GFX_tech_infrastructure"
+	position = { x = 2 y = 1 }
+	color = { 180 180 180 }
+}
+
+tech_category COMMUNICATIONS {
+	name = "CAT_COMUNICACIONES_NAME"
+	desc = "CAT_COMUNICACIONES_DESC"
+	sprite = "GFX_tech_comms"
+	position = { x = 3 y = 1 }
+	color = { 100 180 255 }
+}
+
+tech_category ECONOMY {
+	name = "CAT_ECONOMIA_NAME"
+	desc = "CAT_ECONOMIA_DESC"
+	sprite = "GFX_tech_economy"
+	position = { x = 0 y = 2 }
+	color = { 200 200 60 }
+}
+
+tech_category ADMINISTRATION {
+	name = "CAT_ADMINISTRACION_NAME"
+	desc = "CAT_ADMINISTRACION_DESC"
+	sprite = "GFX_tech_admin"
+	position = { x = 1 y = 2 }
+	color = { 140 100 180 }
+}
+
+tech_category EDUCATION {
+	name = "CAT_EDUCACION_NAME"
+	desc = "CAT_EDUCACION_DESC"
+	sprite = "GFX_tech_education"
+	position = { x = 2 y = 2 }
+	color = { 100 200 100 }
+}
+
+tech_category PUBLIC_HEALTH {
+	name = "CAT_SALUD_PUBLICA_NAME"
+	desc = "CAT_SALUD_PUBLICA_DESC"
+	sprite = "GFX_tech_health"
+	position = { x = 3 y = 2 }
+	color = { 255 150 150 }
+}
+
+era INDUSTRIAL_ERA_1 {
+	name = "ERA_INDUSTRIAL_TEMPRANA_NAME"
+	desc = "ERA_INDUSTRIAL_TEMPRANA_DESC"
+	year = 1886.0
+	cost_multiplier = 1.0
+}
+
+era INDUSTRIAL_ERA_2 {
+	name = "ERA_INDUSTRIAL_MEDIA_NAME"
+	desc = "ERA_INDUSTRIAL_MEDIA_DESC"
+	year = 1896.0
+	cost_multiplier = 1.3
+}
+
+era INDUSTRIAL_ERA_3 {
+	name = "ERA_INDUSTRIAL_AVANZADA_NAME"
+	desc = "ERA_INDUSTRIAL_AVANZADA_DESC"
+	year = 1906.0
+	cost_multiplier = 1.6
+}

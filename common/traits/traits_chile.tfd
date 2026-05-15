@@ -1,0 +1,377 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  traits/traits_chile.tfd — Relicta History Engine
+#  Rasgos de personajes para el escenario chileno 1886
+# ═══════════════════════════════════════════════════════════════════════════
+
+trait ambitious_reformer {
+	name = "TRAIT_AMBITIOUS_REFORMER_NAME"
+	desc = "TRAIT_AMBITIOUS_REFORMER_DESC"
+	type = personality
+
+	effect {
+		reform_speed = 0.15
+		political_opposition = 0.10
+		modernization_drive = 0.20
+	}
+}
+
+trait orator_eloquent {
+	name = "TRAIT_ORATOR_NAME"
+	desc = "TRAIT_ORATOR_DESC"
+	type = personality
+
+	effect {
+		popularity = 5.0
+		political_influence = 0.10
+		debate_victory_chance = 0.15
+	}
+}
+
+trait centralist {
+	name = "TRAIT_CENTRALIST_NAME"
+	desc = "TRAIT_CENTRALIST_DESC"
+	type = political_conviction
+
+	effect {
+		centralization = 0.10
+		regional_autonomy = -0.10
+		capital_development = 0.05
+	}
+}
+
+trait financial_genius {
+	name = "TRAIT_FINANCIAL_GENIUS_NAME"
+	desc = "TRAIT_FINANCIAL_GENIUS_DESC"
+	type = skill
+
+	effect {
+		tax_efficiency = 0.10
+		inflation_control = 0.05
+		treasury_growth = 0.05
+	}
+}
+
+trait incorruptible {
+	name = "TRAIT_INCORRUPTIBLE_NAME"
+	desc = "TRAIT_INCORRUPTIBLE_DESC"
+	type = virtue
+
+	effect {
+		corruption = -0.15
+		popularity = 3.0
+		loyalty = 0.10
+	}
+}
+
+trait pragmatic_diplomat {
+	name = "TRAIT_PRAGMATIC_DIPLOMAT_NAME"
+	desc = "TRAIT_PRAGMATIC_DIPLOMAT_DESC"
+	type = skill
+
+	effect {
+		diplomatic_relations = 0.10
+		treaty_acceptance = 0.10
+		improve_relations_speed = 0.15
+	}
+}
+
+trait conservative_liberal {
+	name = "TRAIT_CONSERVATIVE_LIBERAL_NAME"
+	desc = "TRAIT_CONSERVATIVE_LIBERAL_DESC"
+	type = political_conviction
+
+	effect {
+		reform_speed = -0.05
+		stability = 0.05
+		elite_consensus = 0.10
+	}
+}
+
+trait secular_reformer {
+	name = "TRAIT_SECULAR_REFORMER_NAME"
+	desc = "TRAIT_SECULAR_REFORMER_DESC"
+	type = political_conviction
+
+	effect {
+		church_influence = -0.10
+		secular_law_support = 0.15
+		freemason_influence = 0.05
+	}
+}
+
+trait veteran_statesman {
+	name = "TRAIT_VETERAN_STATESMAN_NAME"
+	desc = "TRAIT_VETERAN_STATESMAN_DESC"
+	type = experience
+
+	effect {
+		political_influence = 0.10
+		xp_gain = 0.05
+		advice_quality = 0.10
+	}
+}
+
+trait anti_clerical {
+	name = "TRAIT_ANTI_CLERICAL_NAME"
+	desc = "TRAIT_ANTI_CLERICAL_DESC"
+	type = political_conviction
+
+	effect {
+		church_influence = -0.15
+		relation_PAP = -0.30
+		support_LIBERAL_RADICAL = 0.10
+	}
+}
+
+trait brilliant_strategist {
+	name = "TRAIT_BRILLIANT_STRATEGIST_NAME"
+	desc = "TRAIT_BRILLIANT_STRATEGIST_DESC"
+	type = military_skill
+
+	effect {
+		land_battle_planning = 0.20
+		army_morale = 0.10
+		offensive_tactics = 0.15
+	}
+}
+
+trait war_hero_pacific {
+	name = "TRAIT_WAR_HERO_PACIFIC_NAME"
+	desc = "TRAIT_WAR_HERO_PACIFIC_DESC"
+	type = fame
+
+	effect {
+		popularity = 15.0
+		army_morale = 0.05
+		recruitment_speed = 0.05
+	}
+}
+
+trait cautious_commander {
+	name = "TRAIT_CAUTIOUS_COMMANDER_NAME"
+	desc = "TRAIT_CAUTIOUS_COMMANDER_DESC"
+	type = military_style
+
+	effect {
+		attrition = -0.10
+		defensive_tactics = 0.15
+		offensive_tactics = -0.05
+	}
+}
+
+trait national_hero {
+	name = "TRAIT_NATIONAL_HERO_NAME"
+	desc = "TRAIT_NATIONAL_HERO_DESC"
+	type = fame
+
+	effect {
+		national_unity = 0.10
+		navy_morale = 0.10
+		popularity = 20.0
+	}
+}
+
+trait martyr_of_duty {
+	name = "TRAIT_MARTYR_DUTY_NAME"
+	desc = "TRAIT_MARTYR_DUTY_DESC"
+	type = fame
+
+	effect {
+		navy_morale = 0.15
+		national_unity = 0.08
+		war_support = 0.05
+	}
+}
+
+trait naval_legend {
+	name = "TRAIT_NAVAL_LEGEND_NAME"
+	desc = "TRAIT_NAVAL_LEGEND_DESC"
+	type = fame
+
+	effect {
+		naval_prestige = 10.0
+		naval_tradition = 0.10
+		naval_recruitment = 0.05
+	}
+}
+
+trait naval_organizer {
+	name = "TRAIT_NAVAL_ORGANIZER_NAME"
+	desc = "TRAIT_NAVAL_ORGANIZER_DESC"
+	type = military_skill
+
+	effect {
+		navy_organization = 0.15
+		naval_logistics = 0.10
+		fleet_coordination = 0.10
+	}
+}
+
+trait disciplined_admiral {
+	name = "TRAIT_DISCIPLINED_ADMIRAL_NAME"
+	desc = "TRAIT_DISCIPLINED_ADMIRAL_DESC"
+	type = military_style
+
+	effect {
+		navy_discipline = 0.15
+		navy_morale = 0.05
+		naval_training = 0.10
+	}
+}
+
+trait occupation_governor {
+	name = "TRAIT_OCCUPATION_GOVERNOR_NAME"
+	desc = "TRAIT_OCCUPATION_GOVERNOR_DESC"
+	type = skill
+
+	effect {
+		occupation_resistance = -0.15
+		province_administration = 0.10
+		counter_insurgency = 0.10
+	}
+}
+
+trait administrator_commander {
+	name = "TRAIT_ADMINISTRATOR_NAME"
+	desc = "TRAIT_ADMINISTRATOR_DESC"
+	type = skill
+
+	effect {
+		supply_consumption = -0.10
+		army_organization = 0.10
+		recruitment_cost = -0.05
+	}
+}
+
+trait conservative_leader {
+	name = "TRAIT_CONSERVATIVE_LEADER_NAME"
+	desc = "TRAIT_CONSERVATIVE_LEADER_DESC"
+	type = political_conviction
+
+	effect {
+		church_influence = 0.10
+		reform_speed = -0.10
+		tradition_preservation = 0.10
+	}
+}
+
+trait clerical_defender {
+	name = "TRAIT_CLERICAL_DEFENDER_NAME"
+	desc = "TRAIT_CLERICAL_DEFENDER_DESC"
+	type = political_conviction
+
+	effect {
+		church_influence = 0.15
+		relation_PAP = 0.20
+		secular_law_opposition = 0.15
+	}
+}
+
+trait parliamentary_orator {
+	name = "TRAIT_PARLIAMENTARY_ORATOR_NAME"
+	desc = "TRAIT_PARLIAMENTARY_ORATOR_DESC"
+	type = skill
+
+	effect {
+		legislative_influence = 0.10
+		law_enactment_speed = 0.05
+		political_debate = 0.10
+	}
+}
+
+trait nationalist_leader {
+	name = "TRAIT_NATIONALIST_LEADER_NAME"
+	desc = "TRAIT_NATIONALIST_LEADER_DESC"
+	type = political_conviction
+
+	effect {
+		war_support = 0.10
+		foreign_influence = -0.05
+		national_industry = 0.05
+		military_spending = 0.10
+	}
+}
+
+trait industrial_promoter {
+	name = "TRAIT_INDUSTRIAL_PROMOTER_NAME"
+	desc = "TRAIT_INDUSTRIAL_PROMOTER_DESC"
+	type = skill
+
+	effect {
+		industrial_growth = 0.10
+		factory_output = 0.05
+		infrastructure_priority = 0.05
+	}
+}
+
+trait skilled_diplomat {
+	name = "TRAIT_SKILLED_DIPLOMAT_NAME"
+	desc = "TRAIT_SKILLED_DIPLOMAT_DESC"
+	type = skill
+
+	effect {
+		diplomatic_relations = 0.15
+		alliance_acceptance = 0.10
+		casus_belli_cost = -0.10
+	}
+}
+
+trait anglophile {
+	name = "TRAIT_ANGLOPHILE_NAME"
+	desc = "TRAIT_ANGLOPHILE_DESC"
+	type = political_conviction
+
+	effect {
+		relation_GBR = 0.20
+		british_investment = 0.10
+		naval_doctrine = 0.05
+	}
+}
+
+trait railroad_engineer {
+	name = "TRAIT_RAILWAY_ENGINEER_NAME"
+	desc = "TRAIT_RAILWAY_ENGINEER_DESC"
+	type = skill
+
+	effect {
+		railway_construction_speed = 0.20
+		infrastructure_cost = -0.10
+		mountain_railway_capable = 1
+	}
+}
+
+trait infrastructure_builder {
+	name = "TRAIT_INFRASTRUCTURE_BUILDER_NAME"
+	desc = "TRAIT_INFRASTRUCTURE_BUILDER_DESC"
+	type = skill
+
+	effect {
+		construction_speed = 0.15
+		infrastructure_maintenance = -0.10
+		public_works_quality = 0.10
+	}
+}
+
+trait militar_apolitico {
+	name = "TRAIT_MILITAR_APOLITICO_NAME"
+	desc = "TRAIT_MILITAR_APOLITICO_DESC"
+	type = military_doctrine
+
+	effect {
+		coup_risk = -0.20
+		military_professionalism = 0.15
+		political_influence = -0.10
+	}
+}
+
+trait tecnocrata {
+	name = "TRAIT_TECNOCRATA_NAME"
+	desc = "TRAIT_TECNOCRATA_DESC"
+	type = skill
+
+	effect {
+		research_speed = 0.05
+		construction_efficiency = 0.10
+		bureaucratic_efficiency = 0.10
+	}
+}

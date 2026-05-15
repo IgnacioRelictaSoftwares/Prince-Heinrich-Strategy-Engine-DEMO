@@ -1,0 +1,106 @@
+# ═══════════════════════════════════════════════════════════════════════════
+#  data/gui/components/ingame_components.tfcgui
+#  Componentes reutilizables para pantallas in-game — Relicta History Engine
+# ═══════════════════════════════════════════════════════════════════════════
+
+# ── Botón estándar de panel de juego ────────────────────────────────────────
+component game_panel_button {
+	type        = button
+	name        = ""
+	sprite      = "GFX_game_panel_btn"
+	anchor      = TL
+	origo       = TL
+	size        = [ 200, 32 ]
+	pos         = [ 0, 0 ]
+	text        = ""
+	font        = "hoi_26mbs"
+	text_align  = left
+	interactive = true
+	alpha       = 1.0
+}
+
+# ── Panel con borde decorativo ─────────────────────────────────────────────
+component game_window_panel {
+	type   = panel
+	sprite = "GFX_game_window"
+	size   = [ 500, 400 ]
+	anchor = TL
+	alpha  = 0.95
+}
+
+# ── Cabecera de panel ──────────────────────────────────────────────────────
+component game_panel_header {
+	type       = label
+	text       = ""
+	font       = "default_large"
+	color      = [ 0.9, 0.85, 0.4 ]
+	text_align = left
+	size       = [ 280, 32 ]
+	visible    = true
+}
+
+# ── Barra de progreso de panel ─────────────────────────────────────────────
+component game_progress_bar {
+	type        = progressbar
+	sprite      = "GFX_progress_bg"
+	anchor      = TL
+	origo       = TL
+	size        = [ 150, 12 ]
+	visible     = true
+}
+
+# ── Pestaña de panel ───────────────────────────────────────────────────────
+component game_tab_button {
+	type        = button
+	sprite      = "GFX_tab_btn"
+	size        = [ 80, 28 ]
+	text        = ""
+	font        = "hoi_26mbs"
+	text_align  = center
+	interactive = true
+	visible     = true
+}
+
+# ── Icono de recurso ───────────────────────────────────────────────────────
+component resource_icon {
+	type   = icon
+	sprite = ""
+	size   = [ 24, 24 ]
+	anchor = TL
+	alpha  = 1.0
+}
+
+# ── Tooltip de provincia ───────────────────────────────────────────────────
+component province_tooltip_panel {
+	type   = panel
+	sprite = "GFX_tooltip_bg"
+	size   = [ 280, 150 ]
+	anchor = TL
+	alpha  = 0.92
+	visible = false
+}
+
+# ── Item de cola de construcción ───────────────────────────────────────────
+component construction_queue_item {
+	type   = panel
+	sprite = "GFX_queue_item_bg"
+	size   = [ 460, 36 ]
+	anchor = TL
+	alpha  = 0.85
+}
+
+#ItemBarHead
+component header_bar {
+	type = panel
+	sprite = "GFX_header_bar"
+	size = [1800, 128 ]
+	anchor = TC
+	origo = TC
+}
+component panel_papel {
+	type = panel
+	sprite = "GFX_panel_desc"
+	size = [192, 192]
+	anchor = CL
+	origo = CL
+}
