@@ -141,7 +141,10 @@ guilayout FRONTEND_SCENARIO_SELECTOR {
 				text_align = left
 				visible    = true
 				color      = [ 0.8, 0.8, 0.7 ]
+				
 			}
+			
+			portrait_balma { }
 		}
 		
 	}

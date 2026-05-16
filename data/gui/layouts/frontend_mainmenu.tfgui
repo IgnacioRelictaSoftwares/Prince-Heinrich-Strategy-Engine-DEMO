@@ -58,6 +58,8 @@ guilayout FRONTEND_MAINMENU {
             action      = "settings"
             interactive = true
         }
+		
+		
     }
 
     # ── Panel principal de botones — centro, verticalmente centrado ────
@@ -68,6 +70,8 @@ guilayout FRONTEND_MAINMENU {
         
         visible     = true
         clipping    = false
+		
+		
 
         main_lobby_button {
 			name 		= single_player_button

@@ -86,3 +86,9 @@ component frontend_game_logo {
 	size = [256, 100]
     anchor = TL
 }
+
+component portrait_balma {
+	type = sprite
+	sprite = "GFX_Balmaceda_1886"
+	size = [224, 300]
+}
