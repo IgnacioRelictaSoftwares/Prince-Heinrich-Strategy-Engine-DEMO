@@ -1,0 +1,6 @@
+﻿spriteTypes = {
+	spriteType = {
+		name = "GFX_event_chile_flach"
+		texturefile = "gfx/event_pictures/Flach_Submarino.dds"
+	}
+}

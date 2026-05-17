@@ -1,0 +1,44 @@
+﻿event CHL_FLACH_1866 {
+	title = "CHL_FLACH_1866_TITLE"
+	desc = "CHL_FLACH_1866_DESC"
+	picture = "GFX_event_chile_flach"
+	is_unique = true
+	
+	trigger {
+		AND {
+			owner = CHL
+			date >= 1866
+			not { has_flag = FLACH_INCIDENT }
+		}
+	}
+	
+	option {
+		name = "CHL_FLACH_1866_OPT_A"
+		effect {
+			set_flag = FLACH_INCIDENT
+			stability = -0.10
+			support_LIBERAL_REFORMISTA = 0.12
+		}
+	}
+	
+	option {
+		name = "CHL_FLACH_1866_OPT_B"
+		effect {
+			set_flag = FLACH_INCIDENT
+			stability = -0.10
+			support_LIBERAL_REFORMISTA = 0.12
+		}
+	}
+	
+	option {
+		name = "CHL_FLACH_1866_OPT_C"
+		effect {
+			set_flag = FLACH_INCIDENT
+			stability = -0.10
+			support_LIBERAL_REFORMISTA = 0.12
+		}
+	}
+	
+	
+
+}

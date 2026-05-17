@@ -144,7 +144,7 @@ guilayout FRONTEND_SCENARIO_SELECTOR {
 				
 			}
 			
-			portrait_balma { }
+			
 		}
 		
 	}
